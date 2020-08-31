@@ -1,0 +1,16 @@
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\bin\Debug\PlayerUI.exe.config
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\bin\Debug\PlayerUI.exe
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\bin\Debug\PlayerUI.pdb
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.GUI.Antecedentes.GUIAddAntecedente.resources
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.GUI.Antecedentes.GUIDeleteAntecedentes.resources
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.GUI.GUIAddCiudadano.resources
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.GUI.GUIDeleteCiudadano.resources
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.GUI.Ciudadano.GUISearchCiudadano.resources
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.GUI.GUIUpdateCiudadano.resources
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.GUI.GUIHelp.resources
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.GUIMenuPrincipal.resources
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.Properties.Resources.resources
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\ClienteAntecedentesSWNet.csproj.GenerateResource.cache
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\ClienteAntecedentesSWNet.csproj.CoreCompileInputs.cache
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.exe
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.pdb
