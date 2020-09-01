@@ -75,7 +75,8 @@ namespace PlayerUI.GUI.Antecedentes
 
                 if(controller.actualizarAntecedente(id, ciudadanoDI, delitoCod, ciudad, date, sentencia, estado))
                 { 
-                   MessageBox.Show("El antecedente ha sido actualizado correctamente!"); 
+                   MessageBox.Show("El antecedente ha sido actualizado correctamente!");
+                    limpiar();
                 }
                 else 
                 {
@@ -87,6 +88,16 @@ namespace PlayerUI.GUI.Antecedentes
             {
                 MessageBox.Show("Error! " + ex);
             }
+        }
+
+        private void limpiar()
+        {
+            txtCiudad.Text = "";
+            txtSentencia.Text = "";
+            txtEstado.Text = "";
+            txtSentencia.Text = "";
+            txtDelito.Text = "";
+            txtDi.Text = "";
         }
     }
 }

@@ -57,6 +57,7 @@ namespace PlayerUI.GUI
                 if (controller.agregarCiudadano(cedula, tipoDoc, nombre, apellido, fecha, genero))
                 {
                     MessageBox.Show("El ciudadano fue agregado exitosamente!");
+                    limpiar();
                 }
             }
             catch(Exception ex)
@@ -116,6 +117,13 @@ namespace PlayerUI.GUI
             {
                 errorProv.Clear();
             }
+        }
+
+        private void limpiar()
+        {
+            txtDi.Text = "";
+            txtNombre.Text = "";
+            txtApellido.Text = "";
         }
         #endregion
     }

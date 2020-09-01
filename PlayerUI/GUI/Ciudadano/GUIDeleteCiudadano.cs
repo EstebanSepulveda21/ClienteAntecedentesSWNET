@@ -62,6 +62,7 @@ namespace PlayerUI.GUI
                 if (controller.eliminarCiudadano(cedula))
                 {
                     MessageBox.Show("Ciudadano eliminado correctamente!");
+                    limpiar();
                 }
                 else
                 {
@@ -85,6 +86,13 @@ namespace PlayerUI.GUI
             {
                 errorProv.Clear();
             }
+        }
+
+        private void limpiar()
+        {
+            textBox1.Text = "";
+            txtName.Text = "";
+            txtAp.Text = "";
         }
     }
 }

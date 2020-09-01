@@ -69,6 +69,7 @@ namespace PlayerUI.GUI.Antecedentes
                 if (controller.agregarAntecedente(ciudadanoDI, delitoCod, ciudad, date, sentencia, estado))
                 {
                     MessageBox.Show("El ciudadano con el DI: " + ciudadanoDI + " se le añadió correctamente el antecedente");
+                    limpiar();
                 }
                 else
                 {
@@ -95,6 +96,15 @@ namespace PlayerUI.GUI.Antecedentes
         public void CambiarTxtCiudadano(string ciudadanoDI)
         {
             textBox1.Text = ciudadanoDI;
+        }
+
+        private void limpiar()
+        {
+            txtCiudad.Text = "";
+            txtCod.Text = "";
+            txtEstado.Text = "";
+            txtSentencia.Text = "";
+            textBox1.Text = "";
         }
     }
 }
