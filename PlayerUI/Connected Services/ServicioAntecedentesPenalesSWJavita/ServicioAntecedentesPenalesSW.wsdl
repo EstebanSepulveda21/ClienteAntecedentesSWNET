@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://model/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ServicioAntecedentesPenalesSW" targetNamespace="http://model/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://192.168.16.13:7101/ServidorAntecedentesJDBCSW-ServidorAntecedentesSW-context-root/ServicioAntecedentesPenalesPort?xsd=1" namespace="http://model/" />
+    </xsd:schema>
+  </types>
+  <message name="darAntecedentesPorCiudadanoYDelito">
+    <part name="parameters" element="tns:darAntecedentesPorCiudadanoYDelito" />
+  </message>
+  <message name="darAntecedentesPorCiudadanoYDelitoResponse">
+    <part name="parameters" element="tns:darAntecedentesPorCiudadanoYDelitoResponse" />
+  </message>
+  <message name="darDelitos">
+    <part name="parameters" element="tns:darDelitos" />
+  </message>
+  <message name="darDelitosResponse">
+    <part name="parameters" element="tns:darDelitosResponse" />
+  </message>
+  <message name="darCiudadanos">
+    <part name="parameters" element="tns:darCiudadanos" />
+  </message>
+  <message name="darCiudadanosResponse">
+    <part name="parameters" element="tns:darCiudadanosResponse" />
+  </message>
+  <message name="agregarCiudadano">
+    <part name="parameters" element="tns:agregarCiudadano" />
+  </message>
+  <message name="agregarCiudadanoResponse">
+    <part name="parameters" element="tns:agregarCiudadanoResponse" />
+  </message>
+  <message name="darCiudadanoPorCedula">
+    <part name="parameters" element="tns:darCiudadanoPorCedula" />
+  </message>
+  <message name="darCiudadanoPorCedulaResponse">
+    <part name="parameters" element="tns:darCiudadanoPorCedulaResponse" />
+  </message>
+  <message name="darAntecedentesPorCiudadano">
+    <part name="parameters" element="tns:darAntecedentesPorCiudadano" />
+  </message>
+  <message name="darAntecedentesPorCiudadanoResponse">
+    <part name="parameters" element="tns:darAntecedentesPorCiudadanoResponse" />
+  </message>
+  <message name="eliminarAntecedente">
+    <part name="parameters" element="tns:eliminarAntecedente" />
+  </message>
+  <message name="eliminarAntecedenteResponse">
+    <part name="parameters" element="tns:eliminarAntecedenteResponse" />
+  </message>
+  <message name="darAntecedentesPorDelito">
+    <part name="parameters" element="tns:darAntecedentesPorDelito" />
+  </message>
+  <message name="darAntecedentesPorDelitoResponse">
+    <part name="parameters" element="tns:darAntecedentesPorDelitoResponse" />
+  </message>
+  <message name="eliminarCiudadano">
+    <part name="parameters" element="tns:eliminarCiudadano" />
+  </message>
+  <message name="eliminarCiudadanoResponse">
+    <part name="parameters" element="tns:eliminarCiudadanoResponse" />
+  </message>
+  <message name="actualizarCiudadano">
+    <part name="parameters" element="tns:actualizarCiudadano" />
+  </message>
+  <message name="actualizarCiudadanoResponse">
+    <part name="parameters" element="tns:actualizarCiudadanoResponse" />
+  </message>
+  <message name="darAntecedentes">
+    <part name="parameters" element="tns:darAntecedentes" />
+  </message>
+  <message name="darAntecedentesResponse">
+    <part name="parameters" element="tns:darAntecedentesResponse" />
+  </message>
+  <message name="darAntecedentePorId">
+    <part name="parameters" element="tns:darAntecedentePorId" />
+  </message>
+  <message name="darAntecedentePorIdResponse">
+    <part name="parameters" element="tns:darAntecedentePorIdResponse" />
+  </message>
+  <message name="darTipoDocumentoPorCodigo">
+    <part name="parameters" element="tns:darTipoDocumentoPorCodigo" />
+  </message>
+  <message name="darTipoDocumentoPorCodigoResponse">
+    <part name="parameters" element="tns:darTipoDocumentoPorCodigoResponse" />
+  </message>
+  <message name="darDelitoPorCodigo">
+    <part name="parameters" element="tns:darDelitoPorCodigo" />
+  </message>
+  <message name="darDelitoPorCodigoResponse">
+    <part name="parameters" element="tns:darDelitoPorCodigoResponse" />
+  </message>
+  <message name="agregarAntecedente">
+    <part name="parameters" element="tns:agregarAntecedente" />
+  </message>
+  <message name="agregarAntecedenteResponse">
+    <part name="parameters" element="tns:agregarAntecedenteResponse" />
+  </message>
+  <message name="actualizarAntecedente">
+    <part name="parameters" element="tns:actualizarAntecedente" />
+  </message>
+  <message name="actualizarAntecedenteResponse">
+    <part name="parameters" element="tns:actualizarAntecedenteResponse" />
+  </message>
+  <message name="darSentenciaTotalPorCiudadano">
+    <part name="parameters" element="tns:darSentenciaTotalPorCiudadano" />
+  </message>
+  <message name="darSentenciaTotalPorCiudadanoResponse">
+    <part name="parameters" element="tns:darSentenciaTotalPorCiudadanoResponse" />
+  </message>
+  <message name="darTipoDocumentos">
+    <part name="parameters" element="tns:darTipoDocumentos" />
+  </message>
+  <message name="darTipoDocumentosResponse">
+    <part name="parameters" element="tns:darTipoDocumentosResponse" />
+  </message>
+  <portType name="ServicioAntecedentesPenales">
+    <operation name="darAntecedentesPorCiudadanoYDelito">
+      <input wsam:Action="http://model/ServicioAntecedentesPenales/darAntecedentesPorCiudadanoYDelitoRequest" message="tns:darAntecedentesPorCiudadanoYDelito" />
+      <output wsam:Action="http://model/ServicioAntecedentesPenales/darAntecedentesPorCiudadanoYDelitoResponse" message="tns:darAntecedentesPorCiudadanoYDelitoResponse" />
+    </operation>
+    <operation name="darDelitos">
+      <input wsam:Action="http://model/ServicioAntecedentesPenales/darDelitosRequest" message="tns:darDelitos" />
+      <output wsam:Action="http://model/ServicioAntecedentesPenales/darDelitosResponse" message="tns:darDelitosResponse" />
+    </operation>
+    <operation name="darCiudadanos">
+      <input wsam:Action="http://model/ServicioAntecedentesPenales/darCiudadanosRequest" message="tns:darCiudadanos" />
+      <output wsam:Action="http://model/ServicioAntecedentesPenales/darCiudadanosResponse" message="tns:darCiudadanosResponse" />
+    </operation>
+    <operation name="agregarCiudadano">
+      <input wsam:Action="http://model/ServicioAntecedentesPenales/agregarCiudadanoRequest" message="tns:agregarCiudadano" />
+      <output wsam:Action="http://model/ServicioAntecedentesPenales/agregarCiudadanoResponse" message="tns:agregarCiudadanoResponse" />
+    </operation>
+    <operation name="darCiudadanoPorCedula">
+      <input wsam:Action="http://model/ServicioAntecedentesPenales/darCiudadanoPorCedulaRequest" message="tns:darCiudadanoPorCedula" />
+      <output wsam:Action="http://model/ServicioAntecedentesPenales/darCiudadanoPorCedulaResponse" message="tns:darCiudadanoPorCedulaResponse" />
+    </operation>
+    <operation name="darAntecedentesPorCiudadano">
+      <input wsam:Action="http://model/ServicioAntecedentesPenales/darAntecedentesPorCiudadanoRequest" message="tns:darAntecedentesPorCiudadano" />
+      <output wsam:Action="http://model/ServicioAntecedentesPenales/darAntecedentesPorCiudadanoResponse" message="tns:darAntecedentesPorCiudadanoResponse" />
+    </operation>
+    <operation name="eliminarAntecedente">
+      <input wsam:Action="http://model/ServicioAntecedentesPenales/eliminarAntecedenteRequest" message="tns:eliminarAntecedente" />
+      <output wsam:Action="http://model/ServicioAntecedentesPenales/eliminarAntecedenteResponse" message="tns:eliminarAntecedenteResponse" />
+    </operation>
+    <operation name="darAntecedentesPorDelito">
+      <input wsam:Action="http://model/ServicioAntecedentesPenales/darAntecedentesPorDelitoRequest" message="tns:darAntecedentesPorDelito" />
+      <output wsam:Action="http://model/ServicioAntecedentesPenales/darAntecedentesPorDelitoResponse" message="tns:darAntecedentesPorDelitoResponse" />
+    </operation>
+    <operation name="eliminarCiudadano">
+      <input wsam:Action="http://model/ServicioAntecedentesPenales/eliminarCiudadanoRequest" message="tns:eliminarCiudadano" />
+      <output wsam:Action="http://model/ServicioAntecedentesPenales/eliminarCiudadanoResponse" message="tns:eliminarCiudadanoResponse" />
+    </operation>
+    <operation name="actualizarCiudadano">
+      <input wsam:Action="http://model/ServicioAntecedentesPenales/actualizarCiudadanoRequest" message="tns:actualizarCiudadano" />
+      <output wsam:Action="http://model/ServicioAntecedentesPenales/actualizarCiudadanoResponse" message="tns:actualizarCiudadanoResponse" />
+    </operation>
+    <operation name="darAntecedentes">
+      <input wsam:Action="http://model/ServicioAntecedentesPenales/darAntecedentesRequest" message="tns:darAntecedentes" />
+      <output wsam:Action="http://model/ServicioAntecedentesPenales/darAntecedentesResponse" message="tns:darAntecedentesResponse" />
+    </operation>
+    <operation name="darAntecedentePorId">
+      <input wsam:Action="http://model/ServicioAntecedentesPenales/darAntecedentePorIdRequest" message="tns:darAntecedentePorId" />
+      <output wsam:Action="http://model/ServicioAntecedentesPenales/darAntecedentePorIdResponse" message="tns:darAntecedentePorIdResponse" />
+    </operation>
+    <operation name="darTipoDocumentoPorCodigo">
+      <input wsam:Action="http://model/ServicioAntecedentesPenales/darTipoDocumentoPorCodigoRequest" message="tns:darTipoDocumentoPorCodigo" />
+      <output wsam:Action="http://model/ServicioAntecedentesPenales/darTipoDocumentoPorCodigoResponse" message="tns:darTipoDocumentoPorCodigoResponse" />
+    </operation>
+    <operation name="darDelitoPorCodigo">
+      <input wsam:Action="http://model/ServicioAntecedentesPenales/darDelitoPorCodigoRequest" message="tns:darDelitoPorCodigo" />
+      <output wsam:Action="http://model/ServicioAntecedentesPenales/darDelitoPorCodigoResponse" message="tns:darDelitoPorCodigoResponse" />
+    </operation>
+    <operation name="agregarAntecedente">
+      <input wsam:Action="http://model/ServicioAntecedentesPenales/agregarAntecedenteRequest" message="tns:agregarAntecedente" />
+      <output wsam:Action="http://model/ServicioAntecedentesPenales/agregarAntecedenteResponse" message="tns:agregarAntecedenteResponse" />
+    </operation>
+    <operation name="actualizarAntecedente">
+      <input wsam:Action="http://model/ServicioAntecedentesPenales/actualizarAntecedenteRequest" message="tns:actualizarAntecedente" />
+      <output wsam:Action="http://model/ServicioAntecedentesPenales/actualizarAntecedenteResponse" message="tns:actualizarAntecedenteResponse" />
+    </operation>
+    <operation name="darSentenciaTotalPorCiudadano">
+      <input wsam:Action="http://model/ServicioAntecedentesPenales/darSentenciaTotalPorCiudadanoRequest" message="tns:darSentenciaTotalPorCiudadano" />
+      <output wsam:Action="http://model/ServicioAntecedentesPenales/darSentenciaTotalPorCiudadanoResponse" message="tns:darSentenciaTotalPorCiudadanoResponse" />
+    </operation>
+    <operation name="darTipoDocumentos">
+      <input wsam:Action="http://model/ServicioAntecedentesPenales/darTipoDocumentosRequest" message="tns:darTipoDocumentos" />
+      <output wsam:Action="http://model/ServicioAntecedentesPenales/darTipoDocumentosResponse" message="tns:darTipoDocumentosResponse" />
+    </operation>
+  </portType>
+  <binding name="ServicioAntecedentesPenalesPortBinding" type="tns:ServicioAntecedentesPenales">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="darAntecedentesPorCiudadanoYDelito">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="darDelitos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="darCiudadanos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarCiudadano">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="darCiudadanoPorCedula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="darAntecedentesPorCiudadano">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarAntecedente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="darAntecedentesPorDelito">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarCiudadano">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarCiudadano">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="darAntecedentes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="darAntecedentePorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="darTipoDocumentoPorCodigo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="darDelitoPorCodigo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarAntecedente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarAntecedente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="darSentenciaTotalPorCiudadano">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="darTipoDocumentos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ServicioAntecedentesPenalesSW">
+    <port name="ServicioAntecedentesPenalesPort" binding="tns:ServicioAntecedentesPenalesPortBinding">
+      <soap:address location="http://192.168.16.13:7101/ServidorAntecedentesJDBCSW-ServidorAntecedentesSW-context-root/ServicioAntecedentesPenalesPort" />
+    </port>
+  </service>
+</definitions>

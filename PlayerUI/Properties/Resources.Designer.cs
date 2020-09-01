@@ -123,6 +123,16 @@ namespace PlayerUI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sentencia {
+            get {
+                object obj = ResourceManager.GetObject("sentencia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap unibague2 {
             get {
                 object obj = ResourceManager.GetObject("unibague2", resourceCulture);

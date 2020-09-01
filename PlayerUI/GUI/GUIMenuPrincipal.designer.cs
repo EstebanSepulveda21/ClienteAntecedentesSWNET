@@ -56,6 +56,7 @@
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnSentencias = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelSubMenuConsultas.SuspendLayout();
             this.panelSubMenuAntecedente.SuspendLayout();
@@ -91,7 +92,7 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 755);
+            this.label1.Location = new System.Drawing.Point(0, 771);
             this.label1.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
@@ -109,10 +110,10 @@
             this.btnExit.ForeColor = System.Drawing.Color.Silver;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(0, 772);
+            this.btnExit.Location = new System.Drawing.Point(0, 788);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnExit.Size = new System.Drawing.Size(250, 45);
+            this.btnExit.Size = new System.Drawing.Size(233, 45);
             this.btnExit.TabIndex = 9;
             this.btnExit.Text = "  Exit";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -130,10 +131,10 @@
             this.btnHelp.ForeColor = System.Drawing.Color.Silver;
             this.btnHelp.Image = ((System.Drawing.Image)(resources.GetObject("btnHelp.Image")));
             this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHelp.Location = new System.Drawing.Point(0, 687);
+            this.btnHelp.Location = new System.Drawing.Point(0, 726);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnHelp.Size = new System.Drawing.Size(250, 45);
+            this.btnHelp.Size = new System.Drawing.Size(233, 45);
             this.btnHelp.TabIndex = 8;
             this.btnHelp.Text = "  Help";
             this.btnHelp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -148,9 +149,9 @@
             this.panelSubMenuConsultas.Controls.Add(this.btnTablaAntecedente);
             this.panelSubMenuConsultas.Controls.Add(this.btnTablaCiudadano);
             this.panelSubMenuConsultas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuConsultas.Location = new System.Drawing.Point(0, 557);
+            this.panelSubMenuConsultas.Location = new System.Drawing.Point(0, 596);
             this.panelSubMenuConsultas.Name = "panelSubMenuConsultas";
-            this.panelSubMenuConsultas.Size = new System.Drawing.Size(250, 130);
+            this.panelSubMenuConsultas.Size = new System.Drawing.Size(233, 130);
             this.panelSubMenuConsultas.TabIndex = 7;
             // 
             // btnGrafica
@@ -164,7 +165,7 @@
             this.btnGrafica.Location = new System.Drawing.Point(0, 80);
             this.btnGrafica.Name = "btnGrafica";
             this.btnGrafica.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnGrafica.Size = new System.Drawing.Size(250, 40);
+            this.btnGrafica.Size = new System.Drawing.Size(233, 40);
             this.btnGrafica.TabIndex = 2;
             this.btnGrafica.Text = "Grafica";
             this.btnGrafica.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -182,7 +183,7 @@
             this.btnTablaAntecedente.Location = new System.Drawing.Point(0, 40);
             this.btnTablaAntecedente.Name = "btnTablaAntecedente";
             this.btnTablaAntecedente.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnTablaAntecedente.Size = new System.Drawing.Size(250, 40);
+            this.btnTablaAntecedente.Size = new System.Drawing.Size(233, 40);
             this.btnTablaAntecedente.TabIndex = 1;
             this.btnTablaAntecedente.Text = "Tabla antecedentes";
             this.btnTablaAntecedente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -200,7 +201,7 @@
             this.btnTablaCiudadano.Location = new System.Drawing.Point(0, 0);
             this.btnTablaCiudadano.Name = "btnTablaCiudadano";
             this.btnTablaCiudadano.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnTablaCiudadano.Size = new System.Drawing.Size(250, 40);
+            this.btnTablaCiudadano.Size = new System.Drawing.Size(233, 40);
             this.btnTablaCiudadano.TabIndex = 0;
             this.btnTablaCiudadano.Text = "Tabla ciudadanos";
             this.btnTablaCiudadano.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -217,10 +218,10 @@
             this.btnConsulta.ForeColor = System.Drawing.Color.Silver;
             this.btnConsulta.Image = ((System.Drawing.Image)(resources.GetObject("btnConsulta.Image")));
             this.btnConsulta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsulta.Location = new System.Drawing.Point(0, 512);
+            this.btnConsulta.Location = new System.Drawing.Point(0, 551);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnConsulta.Size = new System.Drawing.Size(250, 45);
+            this.btnConsulta.Size = new System.Drawing.Size(233, 45);
             this.btnConsulta.TabIndex = 6;
             this.btnConsulta.Text = " Consultas";
             this.btnConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,6 +232,7 @@
             // panelSubMenuAntecedente
             // 
             this.panelSubMenuAntecedente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelSubMenuAntecedente.Controls.Add(this.btnSentencias);
             this.panelSubMenuAntecedente.Controls.Add(this.btnSearchAntecedente);
             this.panelSubMenuAntecedente.Controls.Add(this.btnUpdateAntecedente);
             this.panelSubMenuAntecedente.Controls.Add(this.btnDeleteAntecedente);
@@ -238,7 +240,7 @@
             this.panelSubMenuAntecedente.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuAntecedente.Location = new System.Drawing.Point(0, 347);
             this.panelSubMenuAntecedente.Name = "panelSubMenuAntecedente";
-            this.panelSubMenuAntecedente.Size = new System.Drawing.Size(250, 165);
+            this.panelSubMenuAntecedente.Size = new System.Drawing.Size(233, 204);
             this.panelSubMenuAntecedente.TabIndex = 4;
             // 
             // btnSearchAntecedente
@@ -252,7 +254,7 @@
             this.btnSearchAntecedente.Location = new System.Drawing.Point(0, 120);
             this.btnSearchAntecedente.Name = "btnSearchAntecedente";
             this.btnSearchAntecedente.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnSearchAntecedente.Size = new System.Drawing.Size(250, 40);
+            this.btnSearchAntecedente.Size = new System.Drawing.Size(233, 40);
             this.btnSearchAntecedente.TabIndex = 3;
             this.btnSearchAntecedente.Text = "Buscar";
             this.btnSearchAntecedente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -270,7 +272,7 @@
             this.btnUpdateAntecedente.Location = new System.Drawing.Point(0, 80);
             this.btnUpdateAntecedente.Name = "btnUpdateAntecedente";
             this.btnUpdateAntecedente.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnUpdateAntecedente.Size = new System.Drawing.Size(250, 40);
+            this.btnUpdateAntecedente.Size = new System.Drawing.Size(233, 40);
             this.btnUpdateAntecedente.TabIndex = 2;
             this.btnUpdateAntecedente.Text = "Actualizar";
             this.btnUpdateAntecedente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -288,7 +290,7 @@
             this.btnDeleteAntecedente.Location = new System.Drawing.Point(0, 40);
             this.btnDeleteAntecedente.Name = "btnDeleteAntecedente";
             this.btnDeleteAntecedente.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnDeleteAntecedente.Size = new System.Drawing.Size(250, 40);
+            this.btnDeleteAntecedente.Size = new System.Drawing.Size(233, 40);
             this.btnDeleteAntecedente.TabIndex = 1;
             this.btnDeleteAntecedente.Text = "Eliminar";
             this.btnDeleteAntecedente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -306,7 +308,7 @@
             this.btnAddAntecedente.Location = new System.Drawing.Point(0, 0);
             this.btnAddAntecedente.Name = "btnAddAntecedente";
             this.btnAddAntecedente.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnAddAntecedente.Size = new System.Drawing.Size(250, 40);
+            this.btnAddAntecedente.Size = new System.Drawing.Size(233, 40);
             this.btnAddAntecedente.TabIndex = 0;
             this.btnAddAntecedente.Text = "Añadir";
             this.btnAddAntecedente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -326,7 +328,7 @@
             this.btnAntecedente.Location = new System.Drawing.Point(0, 302);
             this.btnAntecedente.Name = "btnAntecedente";
             this.btnAntecedente.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnAntecedente.Size = new System.Drawing.Size(250, 45);
+            this.btnAntecedente.Size = new System.Drawing.Size(233, 45);
             this.btnAntecedente.TabIndex = 3;
             this.btnAntecedente.Text = "Antecedentes";
             this.btnAntecedente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -344,7 +346,7 @@
             this.panelSubMenuCiudadano.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuCiudadano.Location = new System.Drawing.Point(0, 137);
             this.panelSubMenuCiudadano.Name = "panelSubMenuCiudadano";
-            this.panelSubMenuCiudadano.Size = new System.Drawing.Size(250, 165);
+            this.panelSubMenuCiudadano.Size = new System.Drawing.Size(233, 165);
             this.panelSubMenuCiudadano.TabIndex = 2;
             // 
             // btnSearchCiudadano
@@ -358,7 +360,7 @@
             this.btnSearchCiudadano.Location = new System.Drawing.Point(0, 120);
             this.btnSearchCiudadano.Name = "btnSearchCiudadano";
             this.btnSearchCiudadano.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnSearchCiudadano.Size = new System.Drawing.Size(250, 40);
+            this.btnSearchCiudadano.Size = new System.Drawing.Size(233, 40);
             this.btnSearchCiudadano.TabIndex = 3;
             this.btnSearchCiudadano.Text = "Buscar";
             this.btnSearchCiudadano.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -376,7 +378,7 @@
             this.btnUpdateCiudadano.Location = new System.Drawing.Point(0, 80);
             this.btnUpdateCiudadano.Name = "btnUpdateCiudadano";
             this.btnUpdateCiudadano.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnUpdateCiudadano.Size = new System.Drawing.Size(250, 40);
+            this.btnUpdateCiudadano.Size = new System.Drawing.Size(233, 40);
             this.btnUpdateCiudadano.TabIndex = 2;
             this.btnUpdateCiudadano.Text = "Actualizar";
             this.btnUpdateCiudadano.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -394,7 +396,7 @@
             this.btnDeleteCiudadano.Location = new System.Drawing.Point(0, 40);
             this.btnDeleteCiudadano.Name = "btnDeleteCiudadano";
             this.btnDeleteCiudadano.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnDeleteCiudadano.Size = new System.Drawing.Size(250, 40);
+            this.btnDeleteCiudadano.Size = new System.Drawing.Size(233, 40);
             this.btnDeleteCiudadano.TabIndex = 1;
             this.btnDeleteCiudadano.Text = "Eliminar";
             this.btnDeleteCiudadano.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -412,7 +414,7 @@
             this.btnAddCiudadano.Location = new System.Drawing.Point(0, 0);
             this.btnAddCiudadano.Name = "btnAddCiudadano";
             this.btnAddCiudadano.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnAddCiudadano.Size = new System.Drawing.Size(250, 40);
+            this.btnAddCiudadano.Size = new System.Drawing.Size(233, 40);
             this.btnAddCiudadano.TabIndex = 0;
             this.btnAddCiudadano.Text = "Añadir ";
             this.btnAddCiudadano.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -432,7 +434,7 @@
             this.btnCiudadano.Location = new System.Drawing.Point(0, 92);
             this.btnCiudadano.Name = "btnCiudadano";
             this.btnCiudadano.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnCiudadano.Size = new System.Drawing.Size(250, 45);
+            this.btnCiudadano.Size = new System.Drawing.Size(233, 45);
             this.btnCiudadano.TabIndex = 1;
             this.btnCiudadano.Text = "Ciudadano";
             this.btnCiudadano.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -446,7 +448,7 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(250, 92);
+            this.panelLogo.Size = new System.Drawing.Size(233, 92);
             this.panelLogo.TabIndex = 0;
             // 
             // pictureBox1
@@ -483,6 +485,24 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
+            // btnSentencias
+            // 
+            this.btnSentencias.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSentencias.FlatAppearance.BorderSize = 0;
+            this.btnSentencias.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnSentencias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnSentencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSentencias.ForeColor = System.Drawing.Color.Silver;
+            this.btnSentencias.Location = new System.Drawing.Point(0, 160);
+            this.btnSentencias.Name = "btnSentencias";
+            this.btnSentencias.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnSentencias.Size = new System.Drawing.Size(233, 40);
+            this.btnSentencias.TabIndex = 4;
+            this.btnSentencias.Text = "Calcular sentencias";
+            this.btnSentencias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSentencias.UseVisualStyleBackColor = true;
+            this.btnSentencias.Click += new System.EventHandler(this.btnSentencias_Click);
             // 
             // GUIMenuPrincipal
             // 
@@ -541,6 +561,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnSentencias;
     }
 }
 

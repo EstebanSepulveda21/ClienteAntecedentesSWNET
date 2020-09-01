@@ -14,3 +14,11 @@ D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\ClienteAntecedentesSWNet.
 D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\ClienteAntecedentesSWNet.csproj.CoreCompileInputs.cache
 D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.exe
 D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.pdb
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\ClienteAntecedentesSWNet.csprojAssemblyReference.cache
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.GUI.Antecedentes.GUISearchAntecedente.resources
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.GUI.Antecedentes.GUIUpdateAntecedentes.resources
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.GUI.Consultas.GUITablaCiudadanos.resources
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.GUI.Consultas.GUITablaAntecedentes.resources
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.GUI.Consultas.GUIGrafica.resources
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.GUI.Otras_Consultas.GUICalcularSentencia.resources
+D:\x\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.GUI.Otras_Consultas.GUIDelitos.resources

@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,6 +59,18 @@
     <Compile Include="GUI\Antecedentes\GUIDeleteAntecedentes.Designer.cs">
       <DependentUpon>GUIDeleteAntecedentes.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Antecedentes\GUISearchAntecedente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Antecedentes\GUISearchAntecedente.Designer.cs">
+      <DependentUpon>GUISearchAntecedente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Antecedentes\GUIUpdateAntecedentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Antecedentes\GUIUpdateAntecedentes.Designer.cs">
+      <DependentUpon>GUIUpdateAntecedentes.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Ciudadano\GUIAddCiudadano.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +88,24 @@
     </Compile>
     <Compile Include="GUI\Ciudadano\GUISearchCiudadano.Designer.cs">
       <DependentUpon>GUISearchCiudadano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Consultas\GUIGrafica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Consultas\GUIGrafica.Designer.cs">
+      <DependentUpon>GUIGrafica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Consultas\GUITablaAntecedentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Consultas\GUITablaAntecedentes.Designer.cs">
+      <DependentUpon>GUITablaAntecedentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Consultas\GUITablaCiudadanos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Consultas\GUITablaCiudadanos.Designer.cs">
+      <DependentUpon>GUITablaCiudadanos.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GUIMenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -94,6 +125,18 @@
     <Compile Include="GUI\GUIHelp.Designer.cs">
       <DependentUpon>GUIHelp.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Antecedentes\GUICalcularSentencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Antecedentes\GUICalcularSentencia.Designer.cs">
+      <DependentUpon>GUICalcularSentencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Otras_Consultas\GUIDelitos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Otras_Consultas\GUIDelitos.Designer.cs">
+      <DependentUpon>GUIDelitos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Antecedentes\GUIAddAntecedente.resx">
@@ -101,6 +144,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Antecedentes\GUIDeleteAntecedentes.resx">
       <DependentUpon>GUIDeleteAntecedentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Antecedentes\GUISearchAntecedente.resx">
+      <DependentUpon>GUISearchAntecedente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Antecedentes\GUIUpdateAntecedentes.resx">
+      <DependentUpon>GUIUpdateAntecedentes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Ciudadano\GUIAddCiudadano.resx">
       <DependentUpon>GUIAddCiudadano.cs</DependentUpon>
@@ -114,11 +163,26 @@
     <EmbeddedResource Include="GUI\Ciudadano\GUIUpdateCiudadano.resx">
       <DependentUpon>GUIUpdateCiudadano.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Consultas\GUIGrafica.resx">
+      <DependentUpon>GUIGrafica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Consultas\GUITablaAntecedentes.resx">
+      <DependentUpon>GUITablaAntecedentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Consultas\GUITablaCiudadanos.resx">
+      <DependentUpon>GUITablaCiudadanos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUIHelp.resx">
       <DependentUpon>GUIHelp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUIMenuPrincipal.resx">
       <DependentUpon>GUIMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Antecedentes\GUICalcularSentencia.resx">
+      <DependentUpon>GUICalcularSentencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Otras_Consultas\GUIDelitos.resx">
+      <DependentUpon>GUIDelitos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -153,6 +217,7 @@
     <Content Include="Resources\icono-cliente.png" />
     <Content Include="Resources\memoria.png" />
     <Content Include="Resources\search.gif" />
+    <Content Include="Resources\sentencia.gif" />
     <Content Include="Resources\unibague2.png" />
     <Content Include="Resources\unnamed.png" />
     <Content Include="Resources\update.gif" />

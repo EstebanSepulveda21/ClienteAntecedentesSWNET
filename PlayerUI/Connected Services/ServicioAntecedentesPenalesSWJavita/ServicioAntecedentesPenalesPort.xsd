@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:ns0="http://model/" targetNamespace="http://model/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="darAntecedentesPorCiudadanoYDelitoResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="return" type="ns0:antecedente" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="antecedente">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="ciudad" type="xsd:string" />
+      <xsd:element minOccurs="0" name="ciudadanoDi" type="xsd:string" />
+      <xsd:element name="delitoCodigo" type="xsd:int" />
+      <xsd:element minOccurs="0" name="estado" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechaDelito" type="xsd:dateTime" />
+      <xsd:element name="id" type="xsd:int" />
+      <xsd:element name="sentencia" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="darDelitosResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="return" type="ns0:delito" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="eliminarAntecedente">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="darDelitoPorCodigoResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="return" type="ns0:delito" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="agregarCiudadanoResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="agregarAntecedenteResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="actualizarAntecedente">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" type="ns0:antecedente" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="darAntecedentePorIdResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="return" type="ns0:antecedente" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="darAntecedentesPorCiudadano">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="tipoDocumento">
+    <xsd:sequence>
+      <xsd:element name="codigo" type="xsd:int" />
+      <xsd:element minOccurs="0" name="descripcion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="siglas" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="agregarCiudadano">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" type="ns0:ciudadano" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="actualizarCiudadano">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" type="ns0:ciudadano" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="darCiudadanos" />
+  <xsd:complexType name="darTipoDocumentoPorCodigoResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="return" type="ns0:tipoDocumento" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="darAntecedentes" />
+  <xsd:complexType name="darTipoDocumentoPorCodigo">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="darCiudadanosResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="return" type="ns0:ciudadano" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="darAntecedentePorId">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="darTipoDocumentos" />
+  <xsd:complexType name="darDelitos" />
+  <xsd:complexType name="darAntecedentesPorDelitoResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="return" type="ns0:antecedente" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="agregarAntecedente">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" type="ns0:antecedente" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="darAntecedentesPorDelito">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="eliminarCiudadano">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="darAntecedentesPorCiudadanoResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="return" type="ns0:antecedente" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="darCiudadanoPorCedulaResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="return" type="ns0:ciudadano" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="darAntecedentesPorCiudadanoYDelito">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" type="xsd:string" />
+      <xsd:element name="arg1" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="darAntecedentesResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="return" type="ns0:antecedente" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ciudadano">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="apellido" type="xsd:string" />
+      <xsd:element minOccurs="0" name="cedula" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechaNacimiento" type="xsd:date" />
+      <xsd:element name="genero" type="xsd:boolean" />
+      <xsd:element minOccurs="0" name="nombre" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoDocumento" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="darCiudadanoPorCedula">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="delito">
+    <xsd:sequence>
+      <xsd:element name="codigo" type="xsd:int" />
+      <xsd:element minOccurs="0" name="nombre" type="xsd:string" />
+      <xsd:element name="penaMaxima" type="xsd:int" />
+      <xsd:element name="penaMinima" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="darTipoDocumentosResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="return" type="ns0:tipoDocumento" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="darSentenciaTotalPorCiudadanoResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="darSentenciaTotalPorCiudadano">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="eliminarAntecedenteResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="eliminarCiudadanoResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="actualizarCiudadanoResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="darDelitoPorCodigo">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="actualizarAntecedenteResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="darAntecedentesPorCiudadanoYDelitoResponse" type="ns0:darAntecedentesPorCiudadanoYDelitoResponse" />
+  <xsd:element name="darDelitosResponse" type="ns0:darDelitosResponse" />
+  <xsd:element name="eliminarAntecedente" type="ns0:eliminarAntecedente" />
+  <xsd:element name="darDelitoPorCodigoResponse" type="ns0:darDelitoPorCodigoResponse" />
+  <xsd:element name="agregarCiudadanoResponse" type="ns0:agregarCiudadanoResponse" />
+  <xsd:element name="agregarAntecedenteResponse" type="ns0:agregarAntecedenteResponse" />
+  <xsd:element name="actualizarAntecedente" type="ns0:actualizarAntecedente" />
+  <xsd:element name="darAntecedentePorIdResponse" type="ns0:darAntecedentePorIdResponse" />
+  <xsd:element name="darAntecedentesPorCiudadano" type="ns0:darAntecedentesPorCiudadano" />
+  <xsd:element name="agregarCiudadano" type="ns0:agregarCiudadano" />
+  <xsd:element name="actualizarCiudadano" type="ns0:actualizarCiudadano" />
+  <xsd:element name="darCiudadanos" type="ns0:darCiudadanos" />
+  <xsd:element name="darTipoDocumentoPorCodigoResponse" type="ns0:darTipoDocumentoPorCodigoResponse" />
+  <xsd:element name="darAntecedentes" type="ns0:darAntecedentes" />
+  <xsd:element name="darTipoDocumentoPorCodigo" type="ns0:darTipoDocumentoPorCodigo" />
+  <xsd:element name="darCiudadanosResponse" type="ns0:darCiudadanosResponse" />
+  <xsd:element name="darAntecedentePorId" type="ns0:darAntecedentePorId" />
+  <xsd:element name="darTipoDocumentos" type="ns0:darTipoDocumentos" />
+  <xsd:element name="darDelitos" type="ns0:darDelitos" />
+  <xsd:element name="darAntecedentesPorDelitoResponse" type="ns0:darAntecedentesPorDelitoResponse" />
+  <xsd:element name="agregarAntecedente" type="ns0:agregarAntecedente" />
+  <xsd:element name="darAntecedentesPorDelito" type="ns0:darAntecedentesPorDelito" />
+  <xsd:element name="eliminarCiudadano" type="ns0:eliminarCiudadano" />
+  <xsd:element name="darAntecedentesPorCiudadanoResponse" type="ns0:darAntecedentesPorCiudadanoResponse" />
+  <xsd:element name="darCiudadanoPorCedulaResponse" type="ns0:darCiudadanoPorCedulaResponse" />
+  <xsd:element name="darAntecedentesPorCiudadanoYDelito" type="ns0:darAntecedentesPorCiudadanoYDelito" />
+  <xsd:element name="darAntecedentesResponse" type="ns0:darAntecedentesResponse" />
+  <xsd:element name="darCiudadanoPorCedula" type="ns0:darCiudadanoPorCedula" />
+  <xsd:element name="darTipoDocumentosResponse" type="ns0:darTipoDocumentosResponse" />
+  <xsd:element name="darSentenciaTotalPorCiudadanoResponse" type="ns0:darSentenciaTotalPorCiudadanoResponse" />
+  <xsd:element name="darSentenciaTotalPorCiudadano" type="ns0:darSentenciaTotalPorCiudadano" />
+  <xsd:element name="eliminarAntecedenteResponse" type="ns0:eliminarAntecedenteResponse" />
+  <xsd:element name="eliminarCiudadanoResponse" type="ns0:eliminarCiudadanoResponse" />
+  <xsd:element name="actualizarCiudadanoResponse" type="ns0:actualizarCiudadanoResponse" />
+  <xsd:element name="darDelitoPorCodigo" type="ns0:darDelitoPorCodigo" />
+  <xsd:element name="actualizarAntecedenteResponse" type="ns0:actualizarAntecedenteResponse" />
+</xsd:schema>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configurationSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:xml-wcfconfigurationsnapshot">
+  <behaviors />
+  <bindings>
+    <binding digest="System.ServiceModel.Configuration.BasicHttpBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data name=&quot;ServicioAntecedentesPenalesPortBinding&quot; /&gt;" bindingType="basicHttpBinding" name="ServicioAntecedentesPenalesPortBinding" />
+  </bindings>
+  <endpoints>
+    <endpoint normalizedDigest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://192.168.16.13:7101/ServidorAntecedentesJDBCSW-ServidorAntecedentesSW-context-root/ServicioAntecedentesPenalesPort&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;ServicioAntecedentesPenalesPortBinding&quot; contract=&quot;ServicioAntecedentesPenalesSWJavita.ServicioAntecedentesPenales&quot; name=&quot;ServicioAntecedentesPenalesPort&quot; /&gt;" digest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://192.168.16.13:7101/ServidorAntecedentesJDBCSW-ServidorAntecedentesSW-context-root/ServicioAntecedentesPenalesPort&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;ServicioAntecedentesPenalesPortBinding&quot; contract=&quot;ServicioAntecedentesPenalesSWJavita.ServicioAntecedentesPenales&quot; name=&quot;ServicioAntecedentesPenalesPort&quot; /&gt;" contractName="ServicioAntecedentesPenalesSWJavita.ServicioAntecedentesPenales" name="ServicioAntecedentesPenalesPort" />
+  </endpoints>
+</configurationSnapshot>

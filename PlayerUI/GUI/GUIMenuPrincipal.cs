@@ -1,6 +1,8 @@
 ﻿using PlayerUI.GUI;
 using PlayerUI.GUI.Antecedentes;
 using PlayerUI.GUI.Ciudadano;
+using PlayerUI.GUI.Consultas;
+using PlayerUI.GUI.Otras_Consultas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -82,7 +84,7 @@ namespace PlayerUI
             //Boton añadir ciudadanos
 
             GUIAddCiudadano gui = new GUIAddCiudadano();
-            gui.ShowDialog();
+            gui.Show();
 
             hideSubMenu();
         }
@@ -91,7 +93,7 @@ namespace PlayerUI
         {
             //Boton eliminar ciudadano
             GUIDeleteCiudadano gui = new GUIDeleteCiudadano();
-            gui.ShowDialog();
+            gui.Show();
             hideSubMenu();
         }
 
@@ -99,7 +101,7 @@ namespace PlayerUI
         {
             //Boton actualizar ciudadano
             GUIUpdateCiudadano gui = new GUIUpdateCiudadano();
-            gui.ShowDialog();
+            gui.Show();
             hideSubMenu();
         }
 
@@ -107,7 +109,7 @@ namespace PlayerUI
         {
             //Boton buscar ciudadano
             GUISearchCiudadano gui = new GUISearchCiudadano();
-            gui.ShowDialog();
+            gui.Show();
             hideSubMenu();
         }
         #endregion
@@ -117,7 +119,7 @@ namespace PlayerUI
         {
             //Boton añadir antecedente
             GUIAddAntecedente gui = new GUIAddAntecedente();
-            gui.ShowDialog();
+            gui.Show();
             hideSubMenu();
         }
 
@@ -125,25 +127,23 @@ namespace PlayerUI
         {
             //Boton eliminar antecedente
             GUIDeleteAntecedentes gui = new GUIDeleteAntecedentes();
-            gui.ShowDialog();
+            gui.Show();
             hideSubMenu();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             //Boton actualizar antecedente
-            //..
-            //your codes
-            //..
+            GUIUpdateAntecedentes gui = new GUIUpdateAntecedentes();
+            gui.Show();
             hideSubMenu();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             //Boton buscar antecedente
-            //..
-            //your codes
-            //..
+            GUISearchAntecedente gui = new GUISearchAntecedente();
+            gui.Show();
             hideSubMenu();
         }
         #endregion
@@ -152,27 +152,24 @@ namespace PlayerUI
         private void button13_Click(object sender, EventArgs e)
         {
             //Boton tabla ciudadano
-            //..
-            //your codes
-            //..
+            GUITablaCiudadanos gui = new GUITablaCiudadanos();
+            gui.Show();
             hideSubMenu();
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
             //Boton tabla antecedente
-            //..
-            //your codes
-            //..
+            GUITablaAntecedentes gui = new GUITablaAntecedentes();
+            gui.Show();
             hideSubMenu();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             //Boton grafica
-            //..
-            //your codes
-            //..
+            GUIGrafica gui = new GUIGrafica();
+            gui.Show();
             hideSubMenu();
         }
 
@@ -202,6 +199,12 @@ namespace PlayerUI
         private void timer1_Tick_1(object sender, EventArgs e)
         {
             label1.Text = DateTime.Now.ToString();
+        }
+
+        private void btnSentencias_Click(object sender, EventArgs e)
+        {
+            GUICalcularSentencia gui = new GUICalcularSentencia();
+            gui.Show();
         }
     }
 }
