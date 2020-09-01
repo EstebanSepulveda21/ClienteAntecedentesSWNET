@@ -51,6 +51,7 @@
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -165,6 +166,7 @@
             this.btnLista.TabIndex = 47;
             this.btnLista.Text = "...";
             this.btnLista.UseVisualStyleBackColor = false;
+            this.btnLista.Click += new System.EventHandler(this.btnLista_Click);
             // 
             // textBox1
             // 
@@ -214,9 +216,9 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(253, 205);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 17);
+            this.label3.Size = new System.Drawing.Size(92, 17);
             this.label3.TabIndex = 41;
-            this.label3.Text = "Codigo";
+            this.label3.Text = "Codigo Delito";
             // 
             // label2
             // 
@@ -290,11 +292,24 @@
             this.pictureBox3.TabIndex = 55;
             this.pictureBox3.TabStop = false;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(541, 199);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(37, 23);
+            this.button2.TabIndex = 60;
+            this.button2.Text = "...";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // GUIAddAntecedente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(591, 456);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtSentencia);
@@ -352,5 +367,6 @@
         private System.Windows.Forms.Label label7;
         public System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button2;
     }
 }

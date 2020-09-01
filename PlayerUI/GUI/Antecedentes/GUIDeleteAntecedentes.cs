@@ -9,10 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PlayerUI.ServicioAntecedentesPenalesSWJavita;
+using PlayerUI.GUI.Otras_Consultas;
+using PlayerUI.GUI.Consultas;
 
 namespace PlayerUI.GUI.Antecedentes
 {
-    public partial class GUIDeleteAntecedentes : Form
+    public partial class GUIDeleteAntecedentes : Form, IBuscarDelito, IBuscarCiudadano
     {
         private ControllerAntecedentesPenales controller;
 
@@ -100,6 +102,22 @@ namespace PlayerUI.GUI.Antecedentes
             {
                 errorProvider1.Clear();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GUIDelitos gui = new GUIDelitos(this);
+            gui.ShowDialog();
+        }
+
+        public void CambiarTxtCiudadano(string ciudadanoDI)
+        {
+            textBox1.Text = ciudadanoDI;
+        }
+
+        public void CambiarTxtDelito(int codigoDelito)
+        {
+            textBox2.Text = "" + codigoDelito;
         }
     }
 }

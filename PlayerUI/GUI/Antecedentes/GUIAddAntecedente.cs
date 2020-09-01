@@ -8,10 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PlayerUI.GUI.Consultas;
+using PlayerUI.GUI.Otras_Consultas;
 
 namespace PlayerUI.GUI.Antecedentes
 {
-    public partial class GUIAddAntecedente : Form
+    public partial class GUIAddAntecedente : Form, IBuscarCiudadano, IBuscarDelito
     {
         private ControllerAntecedentesPenales controller;
 
@@ -77,6 +79,22 @@ namespace PlayerUI.GUI.Antecedentes
             {
                 MessageBox.Show("Error! " + ex);
             }
+        }
+
+        private void btnLista_Click(object sender, EventArgs e)
+        {
+            GUITablaCiudadanos gui = new GUITablaCiudadanos(this);
+            gui.ShowDialog();
+        }
+
+        public void CambiarTxtDelito(int codigoDelito)
+        {
+            txtCod.Text = "" + codigoDelito;
+        }
+
+        public void CambiarTxtCiudadano(string ciudadanoDI)
+        {
+            textBox1.Text = ciudadanoDI;
         }
     }
 }
