@@ -62,7 +62,7 @@ namespace PlayerUI.GUI
             }
             catch(Exception ex)
             {
-                MessageBox.Show("No se pudo realizar esta acción");
+                MessageBox.Show("No se pudo realizar esta acción" + ex);
             }
         }
 

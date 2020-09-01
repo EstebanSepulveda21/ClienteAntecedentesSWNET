@@ -85,7 +85,7 @@ namespace PlayerUI.Controller
             }
             catch (Exception e)
             {
-                //Error XD
+                MessageBox.Show("Error! " + e);
             }
             return servicioAntecedentesPenales.actualizarCiudadano(ciudadano);
         }
@@ -131,7 +131,7 @@ namespace PlayerUI.Controller
             }
             catch (Exception e)
             {
-                //ERROR XD
+                MessageBox.Show("Error! " + e);
             }
             antecedente.sentencia=sentencia;
             antecedente.estado=estado;
@@ -157,7 +157,7 @@ namespace PlayerUI.Controller
             }
             catch (Exception e)
             {
-                //ERROR XD
+                MessageBox.Show("Error! " + e);
             }
             antecedente.sentencia = sentencia;
             antecedente.estado = estado;
