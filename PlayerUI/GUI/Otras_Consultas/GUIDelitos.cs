@@ -12,9 +12,18 @@ namespace PlayerUI.GUI.Otras_Consultas
 {
     public partial class GUIDelitos : Form
     {
+        IBuscarDelito padre;
         public GUIDelitos()
         {
             InitializeComponent();
+            padre = null;
+        }
+
+        GUIDelitos(IBuscarDelito pPadre)
+        {
+            InitializeComponent();
+            padre = pPadre;
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
