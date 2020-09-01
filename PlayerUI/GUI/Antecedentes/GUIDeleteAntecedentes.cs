@@ -42,16 +42,64 @@ namespace PlayerUI.GUI.Antecedentes
                     txtNombre.Text = "" + antecedentes.ElementAt(0).sentencia;
                     txtApellido.Text = "" + antecedentes.ElementAt(0).estado;
                 }
+                else
+                {
+                    MessageBox.Show("No hay resultados");
+                }
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show("Error! " + ex);
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //btn eliminar
+            try
+            {
+                String cedula = textBox1.Text;
+                ServicioAntecedentesPenalesSWJavita.ciudadano ciudadano = controller.darCiudadanoPorCedula(cedula);
+                int id = Int32.Parse(txtIDAntecedente.Text);
+                if (controller.eliminarAntecedente(id))
+                {
+                    MessageBox.Show("El antecedente del ciudadano identificado con DI: " + ciudadano.cedula + " ha sido eliminado");
+                }
+                else
+                {
+                    MessageBox.Show("No se eliminó correctamente el antecedente");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error!  " + ex);
+            }
+        }
 
+        private void textBox2_Validated(object sender, EventArgs e)
+        {
+            if(textBox1.Text == "")
+            {
+                errorProvider1.SetError(textBox1, "Digite el codigo");
+                textBox1.Focus();
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+        }
+
+        private void textBox1_Validated(object sender, EventArgs e)
+        {
+            if(textBox2.Text == "")
+            {
+                errorProvider1.SetError(textBox2, "Digite el ID");
+                textBox2.Focus();
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
         }
     }
 }
