@@ -44,7 +44,7 @@ namespace PlayerUI.GUI.Otras_Consultas
             for (int i = 0; i < delitos.Count; i++)
             {
                 delito delito = delitos.ElementAt(i);
-                dgvCiudadano.Rows.Insert(i, delito.codigo, delito.nombre.Trim(), delito.penaMinima, delito.penaMaxima);
+                dgvCiudadano.Rows.Insert(i, ""+ delito.codigo, delito.nombre.Trim(), ""+delito.penaMinima, ""+delito.penaMaxima);
             }
         }
 
