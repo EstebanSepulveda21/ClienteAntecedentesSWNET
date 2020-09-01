@@ -33,7 +33,7 @@ namespace PlayerUI.GUI.Antecedentes
             try
             {
                 String ciudadanoDi = txtNi.Text;
-                int codigoDelito = Int32.Parse(txtCiudad.Text);
+                int codigoDelito = Int32.Parse(txtDelito.Text);
                 List<antecedente> antecedentes = controller.darAntecedentesPorCiudadanoYDelito(ciudadanoDi, codigoDelito);
                 if (antecedentes.Count > 0)
                 {

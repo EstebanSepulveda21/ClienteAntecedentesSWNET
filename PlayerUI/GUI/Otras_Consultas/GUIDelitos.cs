@@ -57,5 +57,14 @@ namespace PlayerUI.GUI.Otras_Consultas
                 this.Hide();
             }
         }
+
+        private void dgvCiudadano_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (padre != null)
+            {
+                padre.CambiarTxtDelito(Int32.Parse((string)dgvCiudadano.CurrentRow.Cells[0].Value));
+                this.Hide();
+            }
+        }
     }
 }
