@@ -56,5 +56,18 @@ namespace PlayerUI.GUI.Ciudadano
                 MessageBox.Show("Error! " + ex);
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if(textBox1.Text.Trim() == "")
+            {
+                errorProv.SetError(textBox1, "Por favor ingrese el ID");
+                textBox1.Focus();
+            }
+            else
+            {
+                errorProv.Clear();
+            }
+        }
     }
 }

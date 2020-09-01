@@ -86,5 +86,31 @@ namespace PlayerUI.GUI
                 MessageBox.Show("Error! " + ex);
             }
         }
+
+        private void textBox1_Validated(object sender, EventArgs e)
+        {
+            if(textBox1.Text.Trim() == "")
+            {
+                errorProv.SetError(textBox1, "Por favor ingrese el ID");
+                textBox1.Focus();
+            }
+            else
+            {
+                errorProv.Clear();
+            }
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            if(txtName.Text.Trim() == "")
+            {
+                errorProv.SetError(txtName, "Ingrese el nombre nuevo o cambielo");
+                txtName.Focus();
+            }
+            else
+            {
+                errorProv.Clear();
+            }
+        }
     }
 }
