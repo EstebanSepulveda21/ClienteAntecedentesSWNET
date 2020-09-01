@@ -81,6 +81,7 @@ namespace PlayerUI.Controller
             {
                 ciudadano.fechaNacimiento = fechaNacimiento;
                 ciudadano.fechaNacimientoSpecified = true;
+                ciudadano.tipoDocumentoSpecified = true;
             }
             catch (Exception e)
             {
@@ -145,6 +146,7 @@ namespace PlayerUI.Controller
         public bool actualizarAntecedente(int id, String ciudadanoDi, int delitoCodigo, String ciudad, DateTime fechaDelito, int sentencia, String estado)
         {
             antecedente antecedente = new antecedente();
+            antecedente.id = id;
             antecedente.ciudadanoDi = ciudadanoDi;
             antecedente.delitoCodigo = delitoCodigo;
             antecedente.ciudad = ciudad;
