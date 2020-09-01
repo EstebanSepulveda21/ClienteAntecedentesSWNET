@@ -113,9 +113,11 @@
             this.button1.TabIndex = 54;
             this.button1.Text = "Añadir antecendente";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Location = new System.Drawing.Point(358, 272);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(181, 20);
@@ -123,6 +125,7 @@
             // 
             // txtCiudad
             // 
+            this.txtCiudad.Enabled = false;
             this.txtCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCiudad.Location = new System.Drawing.Point(351, 237);
             this.txtCiudad.Name = "txtCiudad";
@@ -131,6 +134,7 @@
             // 
             // txtCod
             // 
+            this.txtCod.Enabled = false;
             this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCod.Location = new System.Drawing.Point(351, 200);
             this.txtCod.Name = "txtCod";
@@ -238,6 +242,7 @@
             // 
             // txtSentencia
             // 
+            this.txtSentencia.Enabled = false;
             this.txtSentencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSentencia.Location = new System.Drawing.Point(351, 307);
             this.txtSentencia.Name = "txtSentencia";
@@ -257,6 +262,7 @@
             // 
             // txtEstado
             // 
+            this.txtEstado.Enabled = false;
             this.txtEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstado.Location = new System.Drawing.Point(351, 347);
             this.txtEstado.Name = "txtEstado";

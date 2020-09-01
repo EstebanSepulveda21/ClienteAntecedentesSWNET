@@ -28,7 +28,55 @@ namespace PlayerUI.GUI.Antecedentes
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            //btn buscar
+            try
+            {
+                String cedula = textBox1.Text;
+                ServicioAntecedentesPenalesSWJavita.ciudadano ciudadano = controller.darCiudadanoPorCedula(cedula);
+                if(ciudadano != null)
+                {
+                    MessageBox.Show("El ciudadano con el DI: " + ciudadano.cedula + " con el nombre: " + ciudadano.nombre.Trim() + "" + ciudadano.apellido.Trim() + "Ha sido seleccionado");
+                    txtCiudad.Enabled = true;
+                    txtCod.Enabled = true;
+                    txtEstado.Enabled = true;
+                    txtSentencia.Enabled = true;
+                    dateTimePicker1.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("El ciudadano con el DI: " + cedula + " No existe");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error! " + ex);
+            }
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //btn Añadir antecedente
+            try
+            {
+                String ciudadanoDI = textBox1.Text;
+                int delitoCod = Int32.Parse(txtCod.Text);
+                String ciudad = txtCiudad.Text;
+                DateTime date = dateTimePicker1.Value;
+                int sentencia = Int32.Parse(txtSentencia.Text);
+                String estado = txtEstado.Text;
+                if (controller.agregarAntecedente(ciudadanoDI, delitoCod, ciudad, date, sentencia, estado))
+                {
+                    MessageBox.Show("El ciudadano con el DI: " + ciudadanoDI + " se le añadió correctamente el antecedente");
+                }
+                else
+                {
+                    MessageBox.Show("El ciudadano con el DI: " + ciudadanoDI + " no se le añadió el antecedente");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error! " + ex);
+            }
         }
     }
 }
