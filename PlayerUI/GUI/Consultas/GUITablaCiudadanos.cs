@@ -15,10 +15,18 @@ namespace PlayerUI.GUI.Consultas
     public partial class GUITablaCiudadanos : Form
     {
         private ControllerAntecedentesPenales controller;
+        private IBuscarCiudadano padre;
         public GUITablaCiudadanos()
         {
             InitializeComponent();
             controller = ControllerAntecedentesPenales.getInstance();
+        }
+
+        public GUITablaCiudadanos(IBuscarCiudadano pPadre)
+        {
+            InitializeComponent();
+            controller = ControllerAntecedentesPenales.getInstance();
+            padre = pPadre;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -29,7 +37,7 @@ namespace PlayerUI.GUI.Consultas
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             List<ciudadano> ciudadanos = controller.darCiudadanos();
-
+            dgvCiudadano.Rows.Clear();
             for(int i = 0; i < ciudadanos.Count ;i++){
                 ciudadano ciudadano = ciudadanos.ElementAt(i);
                 dgvCiudadano.Rows.Insert(i, ciudadano.cedula, controller.darTipoDocumentoPorCodigo(ciudadano.tipoDocumento).siglas, ciudadano.nombre, ciudadano.apellido, ciudadano.fechaNacimiento);

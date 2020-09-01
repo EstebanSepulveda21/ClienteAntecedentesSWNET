@@ -159,6 +159,7 @@
             this.dgvCiudadano.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCiudadano.Size = new System.Drawing.Size(984, 327);
             this.dgvCiudadano.TabIndex = 6;
+            this.dgvCiudadano.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCiudadano_CellContentClick);
             // 
             // ID
             // 
@@ -304,6 +305,7 @@
             this.btnBuscar.Text = "Filtrar / Mostrar";
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // timer1
             // 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PlayerUI.GUI.Otras_Consultas
 {
-    interface IBuscarDelito
+    public interface IBuscarDelito
     {
         void CambiarTxtDelito(int codigoDelito);
     }

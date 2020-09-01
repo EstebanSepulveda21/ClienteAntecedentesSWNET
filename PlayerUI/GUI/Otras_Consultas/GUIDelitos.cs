@@ -19,11 +19,10 @@ namespace PlayerUI.GUI.Otras_Consultas
             padre = null;
         }
 
-        GUIDelitos(IBuscarDelito pPadre)
+        public GUIDelitos(IBuscarDelito pPadre)
         {
             InitializeComponent();
             padre = pPadre;
-
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

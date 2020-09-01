@@ -115,6 +115,7 @@
     <Compile Include="GUI\Consultas\GUITablaCiudadanos.Designer.cs">
       <DependentUpon>GUITablaCiudadanos.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Consultas\IBuscarCiudadano.cs" />
     <Compile Include="GUI\GUIMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +146,7 @@
     <Compile Include="GUI\Otras_Consultas\GUIDelitos.Designer.cs">
       <DependentUpon>GUIDelitos.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Otras_Consultas\IBuscarDelito.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Antecedentes\GUIAddAntecedente.resx">

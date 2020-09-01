@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace PlayerUI.GUI.Consultas
 {
-    interface IBuscarCiudadano
+    public interface IBuscarCiudadano
     {
-        void CambiarTxtCiudadano(String ciudadanoDI);
+       void CambiarTxtCiudadano(String ciudadanoDI);
     }
 }
