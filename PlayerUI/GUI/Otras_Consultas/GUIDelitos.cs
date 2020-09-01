@@ -47,5 +47,15 @@ namespace PlayerUI.GUI.Otras_Consultas
                 dgvCiudadano.Rows.Insert(i, delito.codigo, delito.nombre.Trim(), delito.penaMinima, delito.penaMaxima);
             }
         }
+
+        private void dgvCiudadano_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (padre != null)
+            {
+                if (e.ColumnIndex == 0)
+                    padre.CambiarTxtDelito(Int32.Parse((string)dgvCiudadano.CurrentRow.Cells[0].Value));
+                this.Hide();
+            }
+        }
     }
 }

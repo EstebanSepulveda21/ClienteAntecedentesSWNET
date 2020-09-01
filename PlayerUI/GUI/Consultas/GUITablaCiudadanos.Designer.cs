@@ -100,6 +100,7 @@
             this.dgvCiudadano.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCiudadano.Size = new System.Drawing.Size(888, 327);
             this.dgvCiudadano.TabIndex = 0;
+            this.dgvCiudadano.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCiudadano_CellContentDoubleClick);
             // 
             // DI
             // 

@@ -43,5 +43,15 @@ namespace PlayerUI.GUI.Consultas
                 dgvCiudadano.Rows.Insert(i, ciudadano.cedula, controller.darTipoDocumentoPorCodigo(ciudadano.tipoDocumento).siglas, ciudadano.nombre, ciudadano.apellido, ciudadano.fechaNacimiento);
             }
         }
+
+        private void dgvCiudadano_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(padre!=null)
+            {
+                if (e.ColumnIndex == 0)
+                    padre.CambiarTxtCiudadano((string)dgvCiudadano.CurrentRow.Cells[0].Value);
+                this.Hide();
+            }
+        }
     }
 }

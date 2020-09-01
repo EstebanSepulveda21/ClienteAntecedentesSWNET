@@ -1,5 +1,6 @@
 ﻿using PlayerUI.Controller;
 using PlayerUI.GUI.Consultas;
+using PlayerUI.ServicioAntecedentesPenalesSWJavita;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,14 +40,9 @@ namespace PlayerUI.GUI.Otras_Consultas
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                int sentenciaTotal = controller.
-            }
-            catch(Exception e)
-            {
-
-            }
+            int sentenciasTotales = controller.darSentenciaTotalPorCiudadano(textBox3.Text);
+            ciudadano ciudadano = controller.darCiudadanoPorCedula(textBox3.Text);
+            MessageBox.Show(" El total de las sentencias del ciudadano: " + ciudadano.nombre.Trim() + " " + ciudadano.apellido.Trim() + " es de: \n" + sentenciasTotales + " años ");
         }
     }
 }
