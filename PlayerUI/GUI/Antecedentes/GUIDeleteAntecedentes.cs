@@ -129,5 +129,11 @@ namespace PlayerUI.GUI.Antecedentes
             textBox1.Text = "";
             textBox2.Text = "";
         }
+
+        private void btnLista_Click(object sender, EventArgs e)
+        {
+            GUIDelitos gui = new GUIDelitos(this);
+            gui.ShowDialog();
+        }
     }
 }

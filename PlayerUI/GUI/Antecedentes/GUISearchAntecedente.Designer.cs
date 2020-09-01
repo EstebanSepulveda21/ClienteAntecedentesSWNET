@@ -164,6 +164,7 @@
             this.button2.TabIndex = 91;
             this.button2.Text = "...";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox3
             // 
@@ -225,6 +226,7 @@
             this.btnLista.TabIndex = 85;
             this.btnLista.Text = "...";
             this.btnLista.UseVisualStyleBackColor = false;
+            this.btnLista.Click += new System.EventHandler(this.btnLista_Click);
             // 
             // textBox1
             // 

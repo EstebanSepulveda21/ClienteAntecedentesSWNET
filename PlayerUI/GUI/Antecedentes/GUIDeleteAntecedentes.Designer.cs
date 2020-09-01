@@ -136,6 +136,7 @@
             this.btnLista.TabIndex = 60;
             this.btnLista.Text = "...";
             this.btnLista.UseVisualStyleBackColor = false;
+            this.btnLista.Click += new System.EventHandler(this.btnLista_Click);
             // 
             // textBox1
             // 

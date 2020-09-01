@@ -176,6 +176,7 @@
             this.btnLista.TabIndex = 64;
             this.btnLista.Text = "...";
             this.btnLista.UseVisualStyleBackColor = false;
+            this.btnLista.Click += new System.EventHandler(this.btnLista_Click);
             // 
             // txtNi
             // 
@@ -250,6 +251,7 @@
             this.button2.TabIndex = 73;
             this.button2.Text = "...";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtDelito
             // 
