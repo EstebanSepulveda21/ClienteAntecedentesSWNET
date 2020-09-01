@@ -1,4 +1,5 @@
 ﻿using PlayerUI.Controller;
+using PlayerUI.GUI.Otras_Consultas;
 using PlayerUI.ServicioAntecedentesPenalesSWJavita;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ using System.Windows.Forms;
 
 namespace PlayerUI.GUI.Consultas
 {
-    public partial class GUITablaAntecedentes : Form
+    public partial class GUITablaAntecedentes : Form, IBuscarCiudadano, IBuscarDelito
     {
         private ControllerAntecedentesPenales controller;
         public GUITablaAntecedentes()
@@ -59,8 +60,8 @@ namespace PlayerUI.GUI.Consultas
 
         public void llenarGrilla(List<antecedente> lista)
         {
-            List<antecedente> antecedentes = controller.darAntecedentes();
-            dgvCiudadano.DataSource=null;
+            List<antecedente> antecedentes = lista;
+            dgvCiudadano.Rows.Clear();
             for (int i = 0; i < antecedentes.Count; i++)
             {
                 antecedente antecedente = antecedentes.ElementAt(i);
@@ -71,6 +72,28 @@ namespace PlayerUI.GUI.Consultas
         private void dgvCiudadano_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            GUITablaCiudadanos gui = new GUITablaCiudadanos(this);
+            gui.ShowDialog();
+        }
+
+        public void CambiarTxtCiudadano(string ciudadanoDI)
+        {
+            textBox1.Text = ciudadanoDI;
+        }
+
+        public void CambiarTxtDelito(int codigoDelito)
+        {
+            textBox2.Text = ""+codigoDelito;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GUIDelitos gui = new GUIDelitos(this);
+            gui.ShowDialog();
         }
     }
 }
