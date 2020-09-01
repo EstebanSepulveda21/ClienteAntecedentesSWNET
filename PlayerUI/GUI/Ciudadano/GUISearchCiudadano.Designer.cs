@@ -40,7 +40,6 @@
             this.txtAp = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnLista = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -169,18 +168,6 @@
             this.btnBuscar.Text = "Buscar  ciudadano";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnLista
-            // 
-            this.btnLista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLista.ForeColor = System.Drawing.Color.White;
-            this.btnLista.Location = new System.Drawing.Point(542, 92);
-            this.btnLista.Name = "btnLista";
-            this.btnLista.Size = new System.Drawing.Size(37, 23);
-            this.btnLista.TabIndex = 47;
-            this.btnLista.Text = "...";
-            this.btnLista.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
@@ -341,7 +328,6 @@
             this.Controls.Add(this.txtAp);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.btnLista);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label5);
@@ -380,7 +366,6 @@
         public System.Windows.Forms.TextBox txtAp;
         public System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Button btnLista;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
