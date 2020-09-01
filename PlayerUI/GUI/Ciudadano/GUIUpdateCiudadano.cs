@@ -65,9 +65,9 @@ namespace PlayerUI.GUI
         {
             try
             {
-                String cedula = textBox1.Text;
-                String nombre = txtName.Text;
-                String apellido = txtAp.Text;
+                String cedula = textBox1.Text.Trim();
+                String nombre = txtName.Text.Trim();
+                String apellido = txtAp.Text.Trim();
                 int tipoDoc = comboBox1.SelectedIndex+1;
                 DateTime date = dateTimePicker1.Value;
                 bool genero = radioButton1.Checked;
