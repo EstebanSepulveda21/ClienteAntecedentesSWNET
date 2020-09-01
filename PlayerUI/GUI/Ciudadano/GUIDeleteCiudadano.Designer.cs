@@ -43,8 +43,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnLista = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtDi = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtAp = new System.Windows.Forms.TextBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -203,32 +203,36 @@
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(388, 165);
+            this.btnBuscar.Location = new System.Drawing.Point(386, 161);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(133, 23);
             this.btnBuscar.TabIndex = 12;
             this.btnBuscar.Text = "Buscar  ciudadano";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // txtDi
+            // txtName
             // 
-            this.txtDi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDi.Location = new System.Drawing.Point(351, 206);
-            this.txtDi.Name = "txtDi";
-            this.txtDi.Size = new System.Drawing.Size(188, 23);
-            this.txtDi.TabIndex = 25;
+            this.txtName.Enabled = false;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(351, 206);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(188, 23);
+            this.txtName.TabIndex = 25;
             // 
-            // textBox2
+            // txtAp
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(351, 243);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 23);
-            this.textBox2.TabIndex = 26;
+            this.txtAp.Enabled = false;
+            this.txtAp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAp.Location = new System.Drawing.Point(351, 243);
+            this.txtAp.Name = "txtAp";
+            this.txtAp.Size = new System.Drawing.Size(188, 23);
+            this.txtAp.TabIndex = 26;
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
+            this.radioButton2.Enabled = false;
             this.radioButton2.Location = new System.Drawing.Point(470, 282);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(51, 17);
@@ -240,6 +244,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.Enabled = false;
             this.radioButton1.Location = new System.Drawing.Point(369, 282);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(62, 17);
@@ -250,6 +255,7 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Location = new System.Drawing.Point(402, 316);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(137, 20);
@@ -266,6 +272,7 @@
             this.button1.TabIndex = 37;
             this.button1.Text = "Eliminar UwUCiudadano";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox3
             // 
@@ -288,8 +295,8 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.txtDi);
+            this.Controls.Add(this.txtAp);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnLista);
             this.Controls.Add(this.textBox1);
@@ -331,8 +338,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnLista;
         private System.Windows.Forms.Button btnBuscar;
-        public System.Windows.Forms.TextBox txtDi;
-        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox txtName;
+        public System.Windows.Forms.TextBox txtAp;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

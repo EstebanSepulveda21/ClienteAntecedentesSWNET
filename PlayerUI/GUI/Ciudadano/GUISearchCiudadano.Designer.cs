@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUISearchCiudadano));
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnCerrar = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.txtDi = new System.Windows.Forms.TextBox();
+            this.txtAp = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnLista = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -47,15 +48,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNi = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.BarraTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -69,6 +69,17 @@
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(592, 38);
             this.BarraTitulo.TabIndex = 5;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(552, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(37, 34);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label6
             // 
@@ -95,6 +106,7 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Location = new System.Drawing.Point(403, 384);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(137, 20);
@@ -103,6 +115,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
+            this.radioButton2.Enabled = false;
             this.radioButton2.Location = new System.Drawing.Point(489, 350);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(51, 17);
@@ -114,6 +127,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.Enabled = false;
             this.radioButton1.Location = new System.Drawing.Point(388, 350);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(62, 17);
@@ -122,21 +136,23 @@
             this.radioButton1.Text = "Hombre";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtAp
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(352, 236);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 23);
-            this.textBox2.TabIndex = 50;
+            this.txtAp.Enabled = false;
+            this.txtAp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAp.Location = new System.Drawing.Point(352, 236);
+            this.txtAp.Name = "txtAp";
+            this.txtAp.Size = new System.Drawing.Size(188, 23);
+            this.txtAp.TabIndex = 50;
             // 
-            // txtDi
+            // txtName
             // 
-            this.txtDi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDi.Location = new System.Drawing.Point(352, 199);
-            this.txtDi.Name = "txtDi";
-            this.txtDi.Size = new System.Drawing.Size(188, 23);
-            this.txtDi.TabIndex = 49;
+            this.txtName.Enabled = false;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(352, 199);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(188, 23);
+            this.txtName.TabIndex = 49;
             // 
             // btnBuscar
             // 
@@ -149,6 +165,7 @@
             this.btnBuscar.TabIndex = 48;
             this.btnBuscar.Text = "Buscar  ciudadano";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnLista
             // 
@@ -247,15 +264,17 @@
             this.label1.TabIndex = 39;
             this.label1.Text = "Tipo de documento";
             // 
-            // textBox3
+            // txtNi
             // 
-            this.textBox3.Location = new System.Drawing.Point(424, 309);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(116, 20);
-            this.textBox3.TabIndex = 58;
+            this.txtNi.Enabled = false;
+            this.txtNi.Location = new System.Drawing.Point(424, 309);
+            this.txtNi.Name = "txtNi";
+            this.txtNi.Size = new System.Drawing.Size(116, 20);
+            this.txtNi.TabIndex = 58;
             // 
             // comboBox2
             // 
+            this.comboBox2.Enabled = false;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "Cedula_De_Ciudadania",
@@ -298,23 +317,12 @@
             this.pictureBox3.TabIndex = 54;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(552, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 34);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // GUISearchCiudadano
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 418);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtNi);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
@@ -322,8 +330,8 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.txtDi);
+            this.Controls.Add(this.txtAp);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnLista);
             this.Controls.Add(this.textBox1);
@@ -342,8 +350,8 @@
             this.Text = "GUISearchCiudadano";
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,8 +367,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        public System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.TextBox txtDi;
+        public System.Windows.Forms.TextBox txtAp;
+        public System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnLista;
         private System.Windows.Forms.TextBox textBox1;
@@ -371,7 +379,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNi;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;

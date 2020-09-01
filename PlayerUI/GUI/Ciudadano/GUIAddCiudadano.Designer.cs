@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUIAddCiudadano));
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -49,9 +50,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.errorProv = new System.Windows.Forms.ErrorProvider(this.components);
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProv)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -129,6 +132,7 @@
             this.txtDi.Name = "txtDi";
             this.txtDi.Size = new System.Drawing.Size(244, 23);
             this.txtDi.TabIndex = 24;
+            this.txtDi.Validated += new System.EventHandler(this.txtDi_Validated);
             // 
             // label4
             // 
@@ -181,6 +185,7 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(244, 23);
             this.txtApellido.TabIndex = 18;
+            this.txtApellido.Validated += new System.EventHandler(this.txtApellido_Validated);
             // 
             // txtNombre
             // 
@@ -189,6 +194,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(244, 23);
             this.txtNombre.TabIndex = 17;
+            this.txtNombre.Validated += new System.EventHandler(this.txtNombre_Validated);
             // 
             // btnCancelar
             // 
@@ -238,6 +244,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(244, 21);
             this.comboBox1.TabIndex = 30;
+            this.comboBox1.Validated += new System.EventHandler(this.comboBox1_Validated);
             // 
             // label7
             // 
@@ -272,6 +279,10 @@
             this.radioButton2.Text = "Mujer";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
+            // errorProv
+            // 
+            this.errorProv.ContainerControl = this;
+            // 
             // GUIAddCiudadano
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,6 +315,7 @@
             this.BarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,5 +343,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.ErrorProvider errorProv;
     }
 }

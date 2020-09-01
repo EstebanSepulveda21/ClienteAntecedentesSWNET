@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PlayerUI.Controller
 {
@@ -45,9 +46,9 @@ namespace PlayerUI.Controller
                 ciudadano.fechaNacimientoSpecified = true;
                 ciudadano.tipoDocumentoSpecified = true;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                //Error XD
+                MessageBox.Show("Error! " + ex);
             }
             return servicioAntecedentesPenales.agregarCiudadano(ciudadano);
         }

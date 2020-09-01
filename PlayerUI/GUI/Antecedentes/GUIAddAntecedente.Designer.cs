@@ -30,12 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUIAddAntecedente));
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnCerrar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.txtDi = new System.Windows.Forms.TextBox();
+            this.txtCiudad = new System.Windows.Forms.TextBox();
+            this.txtCod = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnLista = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -45,15 +46,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtSentencia = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtEstado = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.BarraTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -67,6 +67,17 @@
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(591, 38);
             this.BarraTitulo.TabIndex = 5;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(552, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(37, 34);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label6
             // 
@@ -110,33 +121,34 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(181, 20);
             this.dateTimePicker1.TabIndex = 53;
             // 
-            // textBox2
+            // txtCiudad
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(351, 237);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 23);
-            this.textBox2.TabIndex = 50;
+            this.txtCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCiudad.Location = new System.Drawing.Point(351, 237);
+            this.txtCiudad.Name = "txtCiudad";
+            this.txtCiudad.Size = new System.Drawing.Size(188, 23);
+            this.txtCiudad.TabIndex = 50;
             // 
-            // txtDi
+            // txtCod
             // 
-            this.txtDi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDi.Location = new System.Drawing.Point(351, 200);
-            this.txtDi.Name = "txtDi";
-            this.txtDi.Size = new System.Drawing.Size(188, 23);
-            this.txtDi.TabIndex = 49;
+            this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCod.Location = new System.Drawing.Point(351, 200);
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(188, 23);
+            this.txtCod.TabIndex = 49;
             // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(388, 159);
+            this.btnBuscar.Location = new System.Drawing.Point(385, 157);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(133, 23);
             this.btnBuscar.TabIndex = 48;
             this.btnBuscar.Text = "Buscar  ciudadano";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnLista
             // 
@@ -224,13 +236,13 @@
             this.label1.TabIndex = 39;
             this.label1.Text = "Tipo de documento";
             // 
-            // textBox3
+            // txtSentencia
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(351, 307);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(188, 23);
-            this.textBox3.TabIndex = 57;
+            this.txtSentencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSentencia.Location = new System.Drawing.Point(351, 307);
+            this.txtSentencia.Name = "txtSentencia";
+            this.txtSentencia.Size = new System.Drawing.Size(188, 23);
+            this.txtSentencia.TabIndex = 57;
             // 
             // label7
             // 
@@ -243,13 +255,13 @@
             this.label7.TabIndex = 56;
             this.label7.Text = "Sentencia";
             // 
-            // textBox4
+            // txtEstado
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(351, 347);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(188, 23);
-            this.textBox4.TabIndex = 59;
+            this.txtEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstado.Location = new System.Drawing.Point(351, 347);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(188, 23);
+            this.txtEstado.TabIndex = 59;
             // 
             // label8
             // 
@@ -272,31 +284,20 @@
             this.pictureBox3.TabIndex = 55;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(552, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 34);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // GUIAddAntecedente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(591, 456);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtSentencia);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.txtDi);
+            this.Controls.Add(this.txtCiudad);
+            this.Controls.Add(this.txtCod);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnLista);
             this.Controls.Add(this.textBox1);
@@ -314,8 +315,8 @@
             this.Text = "GUIAddAntecedente";
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,8 +331,8 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        public System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.TextBox txtDi;
+        public System.Windows.Forms.TextBox txtCiudad;
+        public System.Windows.Forms.TextBox txtCod;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnLista;
         private System.Windows.Forms.TextBox textBox1;
@@ -341,9 +342,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox txtSentencia;
         private System.Windows.Forms.Label label7;
-        public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label8;
     }
 }

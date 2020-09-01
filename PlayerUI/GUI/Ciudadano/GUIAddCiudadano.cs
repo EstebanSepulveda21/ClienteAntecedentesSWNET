@@ -45,20 +45,78 @@ namespace PlayerUI.GUI
         private void button1_Click(object sender, EventArgs e)
         {
             //Btn Añadir
-            String cedula = txtDi.Text;
-            int tipoDoc = comboBox1.SelectedIndex+1;
-            String nombre = txtNombre.Text;
-            String apellido = txtApellido.Text;
-            DateTime fecha = dateTimePicker1.Value;
-            bool genero = radioButton1.Checked;
-            if(controller.agregarCiudadano(cedula,tipoDoc,nombre,apellido,fecha,genero)){
-                MessageBox.Show("El ciudadano fue añadido exitosamente");
+            try
+            {
+                String cedula = txtDi.Text;
+                int tipoDoc = comboBox1.SelectedIndex + 1;
+                String nombre = txtNombre.Text;
+                String apellido = txtApellido.Text;
+                DateTime fecha = dateTimePicker1.Value;
+                bool genero = radioButton1.Checked;
+
+                if (controller.agregarCiudadano(cedula, tipoDoc, nombre, apellido, fecha, genero))
+                {
+                    MessageBox.Show("El ciudadano fue agregado exitosamente!");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No se pudo realizar esta acción");
+            }
+        }
+
+        #region validaciones
+        private void txtDi_Validated(object sender, EventArgs e)
+        {
+            if(txtDi.Text.Trim() == "")
+            {
+                errorProv.SetError(txtDi, "Introduce el documento de identidad");
+                txtDi.Focus();
             }
             else
             {
-
+                errorProv.Clear();
             }
-
         }
+
+        private void comboBox1_Validated(object sender, EventArgs e)
+        {
+            if(comboBox1.SelectedIndex <= 0)
+            {
+                errorProv.SetError(comboBox1, "Introduce el tipo del documento de la identidad");
+                comboBox1.Focus();
+            }
+            else
+            {
+                errorProv.Clear();
+            }
+        }
+
+        private void txtNombre_Validated(object sender, EventArgs e)
+        {
+            if(txtNombre.Text.Trim() == "")
+            {
+                errorProv.SetError(txtNombre, "Introduce el nombre del ciudadadano");
+                txtNombre.Focus();
+            }
+            else
+            {
+                errorProv.Clear();
+            }
+        }
+
+        private void txtApellido_Validated(object sender, EventArgs e)
+        {
+            if(txtApellido.Text.Trim() == "")
+            {
+                errorProv.SetError(txtApellido, "Introduce el apellido del ciudadano");
+                txtApellido.Focus();
+            }
+            else
+            {
+                errorProv.Clear();
+            }
+        }
+        #endregion
     }
 }

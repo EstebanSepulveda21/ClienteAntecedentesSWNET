@@ -1,4 +1,5 @@
 ﻿using System;
+using PlayerUI.Controller;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,65 @@ namespace PlayerUI.GUI
 {
     public partial class GUIDeleteCiudadano : Form
     {
+        private ControllerAntecedentesPenales controller;
+
         public GUIDeleteCiudadano()
         {
             InitializeComponent();
+            controller = ControllerAntecedentesPenales.getInstance();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            //btn buscar
+            try
+            {
+                String cedula = textBox1.Text;
+                ServicioAntecedentesPenalesSWJavita.ciudadano ciudadano = controller.darCiudadanoPorCedula(cedula);
+                if (ciudadano != null)
+                {
+                    txtName.Text = ciudadano.nombre;
+                    txtAp.Text = ciudadano.apellido;
+                    if (ciudadano.genero)
+                        radioButton1.Checked = true;
+                    else
+                        radioButton2.Checked = false;
+                    comboBox1.SelectedIndex = ciudadano.tipoDocumento - 1;
+                    dateTimePicker1.Value = ciudadano.fechaNacimiento;
+                }
+                else
+                {
+                    MessageBox.Show("El ciudadano con el DI " + cedula + " no existe");
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Error! " + ex);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String cedula = textBox1.Text;
+                if (controller.eliminarCiudadano(cedula))
+                {
+                    MessageBox.Show("Ciudadano eliminado correctamente!");
+                }
+                else
+                {
+                    MessageBox.Show("Ocurrió un error al eliminar al ciudadano");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error! " + ex);
+            }
         }
     }
 }
