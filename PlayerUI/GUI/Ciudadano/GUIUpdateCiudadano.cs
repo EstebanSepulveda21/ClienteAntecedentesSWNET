@@ -75,6 +75,7 @@ namespace PlayerUI.GUI
                 if (controller.actualizarCiudadano(cedula, tipoDoc, nombre, apellido, date, genero))
                 {
                     MessageBox.Show("El ciudadano con el DI " + cedula + " fue actualizado!");
+                    limpiar();
                 }
                 else
                 {
@@ -111,6 +112,12 @@ namespace PlayerUI.GUI
             {
                 errorProv.Clear();
             }
+        }
+        private void limpiar()
+        {
+            textBox1.Text = "";
+            txtName.Text = "";
+            txtAp.Text = "";
         }
     }
 }

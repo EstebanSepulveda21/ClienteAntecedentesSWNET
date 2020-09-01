@@ -66,6 +66,7 @@ namespace PlayerUI.GUI.Antecedentes
                 if (controller.eliminarAntecedente(id))
                 {
                     MessageBox.Show("El antecedente del ciudadano identificado con DI: " + ciudadano.cedula + " ha sido eliminado");
+                    limpiar();
                 }
                 else
                 {
@@ -118,6 +119,15 @@ namespace PlayerUI.GUI.Antecedentes
         public void CambiarTxtDelito(int codigoDelito)
         {
             textBox2.Text = "" + codigoDelito;
+        }
+
+        private void limpiar()
+        {
+            txtApellido.Text = "";
+            txtIDAntecedente.Text = "";
+            txtNombre.Text = "";
+            textBox1.Text = "";
+            textBox2.Text = "";
         }
     }
 }
