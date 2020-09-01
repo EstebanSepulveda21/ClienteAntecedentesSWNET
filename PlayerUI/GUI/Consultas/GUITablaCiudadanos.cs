@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PlayerUI.Controller;
+using PlayerUI.ServicioAntecedentesPenalesSWJavita;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +14,11 @@ namespace PlayerUI.GUI.Consultas
 {
     public partial class GUITablaCiudadanos : Form
     {
+        private ControllerAntecedentesPenales controller;
         public GUITablaCiudadanos()
         {
             InitializeComponent();
-        
+            controller = ControllerAntecedentesPenales.getInstance();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -25,7 +28,12 @@ namespace PlayerUI.GUI.Consultas
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            dgvCiudadano.Rows.Insert(0, "1", "Rafael", "Fernandez", "AV. Melgar", "56465");
+            List<ciudadano> ciudadanos = controller.darCiudadanos();
+
+            for(int i = 0; i < ciudadanos.Count ;i++){
+                ciudadano ciudadano = ciudadanos.ElementAt(i);
+                dgvCiudadano.Rows.Insert(i, ciudadano.cedula, controller.darTipoDocumentoPorCodigo(ciudadano.tipoDocumento).siglas, ciudadano.nombre, ciudadano.apellido, ciudadano.fechaNacimiento);
+            }
         }
     }
 }

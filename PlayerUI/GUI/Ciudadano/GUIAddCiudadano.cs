@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PlayerUI.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,11 @@ namespace PlayerUI.GUI
 {
     public partial class GUIAddCiudadano : Form
     {
+        private ControllerAntecedentesPenales controller;
         public GUIAddCiudadano()
         {
             InitializeComponent();
+            controller = ControllerAntecedentesPenales.getInstance();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -37,6 +40,25 @@ namespace PlayerUI.GUI
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Btn Añadir
+            String cedula = txtDi.Text;
+            int tipoDoc = comboBox1.SelectedIndex+1;
+            String nombre = txtNombre.Text;
+            String apellido = txtApellido.Text;
+            DateTime fecha = dateTimePicker1.Value;
+            bool genero = radioButton1.Checked;
+            if(controller.agregarCiudadano(cedula,tipoDoc,nombre,apellido,fecha,genero)){
+                MessageBox.Show("El ciudadano fue añadido exitosamente");
+            }
+            else
+            {
+
+            }
+
         }
     }
 }

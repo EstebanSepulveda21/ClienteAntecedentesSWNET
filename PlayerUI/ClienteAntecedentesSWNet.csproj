@@ -35,6 +35,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\ServicioAntecedentesPenalesSWJavita\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ControllerAntecedentesPenales.cs" />
     <Compile Include="GUI\Antecedentes\GUIAddAntecedente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +202,76 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\PlayerUI.ServicioAntecedentesPenalesSWJavita.actualizarAntecedenteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\PlayerUI.ServicioAntecedentesPenalesSWJavita.actualizarCiudadanoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\PlayerUI.ServicioAntecedentesPenalesSWJavita.agregarAntecedenteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\PlayerUI.ServicioAntecedentesPenalesSWJavita.agregarCiudadanoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\PlayerUI.ServicioAntecedentesPenalesSWJavita.antecedente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\PlayerUI.ServicioAntecedentesPenalesSWJavita.ciudadano.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\PlayerUI.ServicioAntecedentesPenalesSWJavita.darAntecedentePorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\PlayerUI.ServicioAntecedentesPenalesSWJavita.darAntecedentesPorCiudadanoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\PlayerUI.ServicioAntecedentesPenalesSWJavita.darAntecedentesPorCiudadanoYDelitoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\PlayerUI.ServicioAntecedentesPenalesSWJavita.darAntecedentesPorDelitoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\PlayerUI.ServicioAntecedentesPenalesSWJavita.darAntecedentesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\PlayerUI.ServicioAntecedentesPenalesSWJavita.darCiudadanoPorCedulaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\PlayerUI.ServicioAntecedentesPenalesSWJavita.darCiudadanosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\PlayerUI.ServicioAntecedentesPenalesSWJavita.darDelitoPorCodigoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\PlayerUI.ServicioAntecedentesPenalesSWJavita.darDelitosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\PlayerUI.ServicioAntecedentesPenalesSWJavita.darSentenciaTotalPorCiudadanoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\PlayerUI.ServicioAntecedentesPenalesSWJavita.darTipoDocumentoPorCodigoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\PlayerUI.ServicioAntecedentesPenalesSWJavita.darTipoDocumentosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\PlayerUI.ServicioAntecedentesPenalesSWJavita.delito.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\PlayerUI.ServicioAntecedentesPenalesSWJavita.eliminarAntecedenteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\PlayerUI.ServicioAntecedentesPenalesSWJavita.eliminarCiudadanoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\PlayerUI.ServicioAntecedentesPenalesSWJavita.tipoDocumento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\ServicioAntecedentesPenalesPort.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\ServicioAntecedentesPenalesSW.wsdl" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -208,6 +286,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\configuration.svcinfo" />
+    <None Include="Connected Services\ServicioAntecedentesPenalesSWJavita\configuration91.svcinfo" />
     <Content Include="Resources\aniadirAntecedente.gif" />
     <Content Include="Resources\Close.png" />
     <Content Include="Resources\creadores.gif" />
@@ -222,8 +306,12 @@
     <Content Include="Resources\unnamed.png" />
     <Content Include="Resources\update.gif" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Controller\" />
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServicioAntecedentesPenalesSWJavita\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
