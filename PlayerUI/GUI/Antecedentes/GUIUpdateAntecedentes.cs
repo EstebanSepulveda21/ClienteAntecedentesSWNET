@@ -32,7 +32,7 @@ namespace PlayerUI.GUI.Antecedentes
             //btn buscar
             try
             {
-                String ciudadanoDi = txtNi.Text;
+                String ciudadanoDi = txtNi.Text.Trim();
                 int codigoDelito = Int32.Parse(txtDelito.Text);
                 List<antecedente> antecedentes = controller.darAntecedentesPorCiudadanoYDelito(ciudadanoDi, codigoDelito);
                 if (antecedentes.Count > 0)
@@ -66,12 +66,12 @@ namespace PlayerUI.GUI.Antecedentes
             try
             {
                 int id = Int32.Parse(txtDi.Text);
-                String ciudadanoDI = txtNi.Text;
+                String ciudadanoDI = txtNi.Text.Trim();
                 int delitoCod = Int32.Parse(txtDelito.Text);
-                String ciudad = txtCiudad.Text;
+                String ciudad = txtCiudad.Text.Trim();
                 DateTime date = dateTimePicker1.Value;
                 int sentencia = Int32.Parse(txtSentencia.Text);
-                String estado = txtEstado.Text;
+                String estado = txtEstado.Text.Trim();
 
                 if(controller.actualizarAntecedente(id, ciudadanoDI, delitoCod, ciudad, date, sentencia, estado))
                 { 
@@ -98,6 +98,7 @@ namespace PlayerUI.GUI.Antecedentes
             txtSentencia.Text = "";
             txtDelito.Text = "";
             txtDi.Text = "";
+            txtNi.Text = "";
         }
     }
 }

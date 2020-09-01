@@ -82,15 +82,7 @@ namespace PlayerUI.GUI
 
         private void comboBox1_Validated(object sender, EventArgs e)
         {
-            if(comboBox1.SelectedIndex <= 0)
-            {
-                errorProv.SetError(comboBox1, "Introduce el tipo del documento de la identidad");
-                comboBox1.Focus();
-            }
-            else
-            {
-                errorProv.Clear();
-            }
+           
         }
 
         private void txtNombre_Validated(object sender, EventArgs e)
