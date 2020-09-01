@@ -73,8 +73,14 @@ namespace PlayerUI.GUI.Antecedentes
                 int sentencia = Int32.Parse(txtSentencia.Text);
                 String estado = txtEstado.Text;
 
-                if(controller.actualizarAntecedente(id, ciudadanoDI, delitoCod, ciudad, date, sentencia, estado)){ MessageBox.Show("El antecedente ha sido actualizado correctamente!"); }
-                else { MessageBox.Show("No se actualizó correctamente"); }
+                if(controller.actualizarAntecedente(id, ciudadanoDI, delitoCod, ciudad, date, sentencia, estado))
+                { 
+                   MessageBox.Show("El antecedente ha sido actualizado correctamente!"); 
+                }
+                else 
+                {
+                   MessageBox.Show("No se actualizó correctamente"); 
+                }
 
             }
             catch(Exception ex)
