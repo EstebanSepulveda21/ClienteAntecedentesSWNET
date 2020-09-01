@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PlayerUI.GUI.Consultas;
 using PlayerUI.GUI.Otras_Consultas;
+using System.Runtime.InteropServices;
 
 namespace PlayerUI.GUI.Antecedentes
 {
@@ -22,6 +23,11 @@ namespace PlayerUI.GUI.Antecedentes
             InitializeComponent();
             controller = ControllerAntecedentesPenales.getInstance();
         }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam)
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -111,6 +117,12 @@ namespace PlayerUI.GUI.Antecedentes
         {
             GUIDelitos gui = new GUIDelitos(this);
             gui.ShowDialog();
+        }
+
+        private void GUIAddAntecedente_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

@@ -356,6 +356,7 @@
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUISearchCiudadano";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GUISearchCiudadano_MouseDown);
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

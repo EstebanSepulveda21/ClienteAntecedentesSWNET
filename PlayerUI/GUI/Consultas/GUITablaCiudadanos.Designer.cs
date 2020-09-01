@@ -213,6 +213,7 @@
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUITablaCiudadanos";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GUITablaCiudadanos_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCiudadano)).EndInit();
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();

@@ -40,6 +40,7 @@
             this.btnTablaCiudadano = new System.Windows.Forms.Button();
             this.btnConsulta = new System.Windows.Forms.Button();
             this.panelSubMenuAntecedente = new System.Windows.Forms.Panel();
+            this.btnSentencias = new System.Windows.Forms.Button();
             this.btnSearchAntecedente = new System.Windows.Forms.Button();
             this.btnUpdateAntecedente = new System.Windows.Forms.Button();
             this.btnDeleteAntecedente = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnSentencias = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelSubMenuConsultas.SuspendLayout();
             this.panelSubMenuAntecedente.SuspendLayout();
@@ -242,6 +242,24 @@
             this.panelSubMenuAntecedente.Name = "panelSubMenuAntecedente";
             this.panelSubMenuAntecedente.Size = new System.Drawing.Size(233, 204);
             this.panelSubMenuAntecedente.TabIndex = 4;
+            // 
+            // btnSentencias
+            // 
+            this.btnSentencias.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSentencias.FlatAppearance.BorderSize = 0;
+            this.btnSentencias.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnSentencias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnSentencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSentencias.ForeColor = System.Drawing.Color.Silver;
+            this.btnSentencias.Location = new System.Drawing.Point(0, 160);
+            this.btnSentencias.Name = "btnSentencias";
+            this.btnSentencias.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnSentencias.Size = new System.Drawing.Size(233, 40);
+            this.btnSentencias.TabIndex = 4;
+            this.btnSentencias.Text = "Calcular sentencias";
+            this.btnSentencias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSentencias.UseVisualStyleBackColor = true;
+            this.btnSentencias.Click += new System.EventHandler(this.btnSentencias_Click);
             // 
             // btnSearchAntecedente
             // 
@@ -485,24 +503,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
-            // 
-            // btnSentencias
-            // 
-            this.btnSentencias.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSentencias.FlatAppearance.BorderSize = 0;
-            this.btnSentencias.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.btnSentencias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.btnSentencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSentencias.ForeColor = System.Drawing.Color.Silver;
-            this.btnSentencias.Location = new System.Drawing.Point(0, 160);
-            this.btnSentencias.Name = "btnSentencias";
-            this.btnSentencias.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnSentencias.Size = new System.Drawing.Size(233, 40);
-            this.btnSentencias.TabIndex = 4;
-            this.btnSentencias.Text = "Calcular sentencias";
-            this.btnSentencias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSentencias.UseVisualStyleBackColor = true;
-            this.btnSentencias.Click += new System.EventHandler(this.btnSentencias_Click);
             // 
             // GUIMenuPrincipal
             // 

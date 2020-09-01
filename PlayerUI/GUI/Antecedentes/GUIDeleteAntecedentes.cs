@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using PlayerUI.ServicioAntecedentesPenalesSWJavita;
 using PlayerUI.GUI.Otras_Consultas;
 using PlayerUI.GUI.Consultas;
+using System.Runtime.InteropServices;
 
 namespace PlayerUI.GUI.Antecedentes
 {
@@ -23,6 +24,11 @@ namespace PlayerUI.GUI.Antecedentes
             InitializeComponent();
             controller = ControllerAntecedentesPenales.getInstance();
         }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -132,8 +138,14 @@ namespace PlayerUI.GUI.Antecedentes
 
         private void btnLista_Click(object sender, EventArgs e)
         {
-            GUIDelitos gui = new GUIDelitos(this);
+            GUITablaCiudadanos gui = new GUITablaCiudadanos(this);
             gui.ShowDialog();
+        }
+
+        private void GUIDeleteAntecedentes_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

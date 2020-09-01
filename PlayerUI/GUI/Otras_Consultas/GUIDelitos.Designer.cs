@@ -182,6 +182,7 @@
             this.Name = "GUIDelitos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUIDelitos";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GUIDelitos_MouseDown);
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

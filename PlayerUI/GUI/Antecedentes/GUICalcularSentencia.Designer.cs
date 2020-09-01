@@ -158,6 +158,7 @@
             this.Name = "GUICalcularSentencia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUICalcularSentencia";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GUICalcularSentencia_MouseDown);
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

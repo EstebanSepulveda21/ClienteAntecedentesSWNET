@@ -323,6 +323,7 @@
             this.Name = "GUISearchAntecedente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUISearchAntecedente";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GUISearchAntecedente_MouseDown);
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
