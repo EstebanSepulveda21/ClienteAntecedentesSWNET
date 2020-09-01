@@ -191,9 +191,12 @@ namespace PlayerUI.Controller
         {
             antecedente[] antecedentesList = servicioAntecedentesPenales.darAntecedentesPorDelito(delitoCodigo);
             List<antecedente> antecedentes = new List<antecedente>();
-            for (int i = 0; i < antecedentesList.Length; i++)
+            if (antecedentesList != null)
             {
-                antecedentes.Add(antecedentesList[i]);
+                for (int i = 0; i < antecedentesList.Length; i++)
+                {
+                    antecedentes.Add(antecedentesList[i]);
+                }
             }
             return antecedentes;
         }

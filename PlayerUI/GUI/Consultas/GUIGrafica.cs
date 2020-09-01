@@ -30,13 +30,13 @@ namespace PlayerUI.GUI.Consultas
         private void hacerGrafica()
         {
             chart1.Titles.Add("Frecuencia de delitos");
-
+            chart1.Series["s1"].IsValueShownAsLabel = true;
             foreach (delito delito in controller.darDelitos())
             {
                 double numDelitos = controller.darAntecedentesPorDelito(delito.codigo).Count;
                 if (numDelitos > 0)
                 {
-                    chart1.Series["s1"].Points.AddXY(delito.nombre, numDelitos);
+                    chart1.Series["s1"].Points.AddXY(delito.nombre, ""+numDelitos);
                 }
             }
         }
