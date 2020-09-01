@@ -36,21 +36,21 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCiudad = new System.Windows.Forms.TextBox();
             this.txtDi = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnLista = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNi = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtDelito = new System.Windows.Forms.TextBox();
+            this.txtSentencia = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtEstado = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -124,24 +124,28 @@
             this.button1.TabIndex = 71;
             this.button1.Text = "Actualizar antecedente";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Location = new System.Drawing.Point(403, 301);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(137, 20);
             this.dateTimePicker1.TabIndex = 70;
             // 
-            // textBox2
+            // txtCiudad
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(352, 228);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 23);
-            this.textBox2.TabIndex = 67;
+            this.txtCiudad.Enabled = false;
+            this.txtCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCiudad.Location = new System.Drawing.Point(352, 228);
+            this.txtCiudad.Name = "txtCiudad";
+            this.txtCiudad.Size = new System.Drawing.Size(188, 23);
+            this.txtCiudad.TabIndex = 67;
             // 
             // txtDi
             // 
+            this.txtDi.Enabled = false;
             this.txtDi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDi.Location = new System.Drawing.Point(352, 191);
             this.txtDi.Name = "txtDi";
@@ -159,6 +163,7 @@
             this.btnBuscar.TabIndex = 65;
             this.btnBuscar.Text = "Buscar  antecedente";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnLista
             // 
@@ -172,12 +177,12 @@
             this.btnLista.Text = "...";
             this.btnLista.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txtNi
             // 
-            this.textBox1.Location = new System.Drawing.Point(352, 106);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 20);
-            this.textBox1.TabIndex = 63;
+            this.txtNi.Location = new System.Drawing.Point(352, 106);
+            this.txtNi.Name = "txtNi";
+            this.txtNi.Size = new System.Drawing.Size(188, 20);
+            this.txtNi.TabIndex = 63;
             // 
             // label5
             // 
@@ -246,20 +251,21 @@
             this.button2.Text = "...";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // textBox3
+            // txtDelito
             // 
-            this.textBox3.Location = new System.Drawing.Point(352, 63);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(188, 20);
-            this.textBox3.TabIndex = 74;
+            this.txtDelito.Location = new System.Drawing.Point(352, 63);
+            this.txtDelito.Name = "txtDelito";
+            this.txtDelito.Size = new System.Drawing.Size(188, 20);
+            this.txtDelito.TabIndex = 74;
             // 
-            // textBox4
+            // txtSentencia
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(353, 263);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(188, 23);
-            this.textBox4.TabIndex = 76;
+            this.txtSentencia.Enabled = false;
+            this.txtSentencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSentencia.Location = new System.Drawing.Point(353, 263);
+            this.txtSentencia.Name = "txtSentencia";
+            this.txtSentencia.Size = new System.Drawing.Size(188, 23);
+            this.txtSentencia.TabIndex = 76;
             // 
             // label7
             // 
@@ -272,13 +278,14 @@
             this.label7.TabIndex = 75;
             this.label7.Text = "Sentencia";
             // 
-            // textBox5
+            // txtEstado
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(353, 332);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(188, 23);
-            this.textBox5.TabIndex = 78;
+            this.txtEstado.Enabled = false;
+            this.txtEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstado.Location = new System.Drawing.Point(353, 332);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(188, 23);
+            this.txtEstado.TabIndex = 78;
             // 
             // label8
             // 
@@ -296,20 +303,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 450);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtSentencia);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtDelito);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtCiudad);
             this.Controls.Add(this.txtDi);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnLista);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNi);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -339,21 +346,21 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox txtCiudad;
         public System.Windows.Forms.TextBox txtDi;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnLista;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNi;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox3;
-        public System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtDelito;
+        public System.Windows.Forms.TextBox txtSentencia;
         private System.Windows.Forms.Label label7;
-        public System.Windows.Forms.TextBox textBox5;
+        public System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label8;
     }
 }
