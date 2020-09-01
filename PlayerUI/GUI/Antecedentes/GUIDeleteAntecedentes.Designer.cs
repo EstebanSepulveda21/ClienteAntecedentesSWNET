@@ -41,7 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtIDAntecedente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -120,6 +120,7 @@
             this.btnBuscar.TabIndex = 61;
             this.btnBuscar.Text = "Buscar  ciudadano";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnLista
             // 
@@ -186,12 +187,13 @@
             this.button1.Text = "...";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // textBox2
+            // txtIDAntecedente
             // 
-            this.textBox2.Location = new System.Drawing.Point(364, 221);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(175, 20);
-            this.textBox2.TabIndex = 65;
+            this.txtIDAntecedente.Enabled = false;
+            this.txtIDAntecedente.Location = new System.Drawing.Point(364, 221);
+            this.txtIDAntecedente.Name = "txtIDAntecedente";
+            this.txtIDAntecedente.Size = new System.Drawing.Size(175, 20);
+            this.txtIDAntecedente.TabIndex = 65;
             // 
             // label3
             // 
@@ -228,6 +230,7 @@
             // 
             // txtApellido
             // 
+            this.txtApellido.Enabled = false;
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido.Location = new System.Drawing.Point(364, 286);
             this.txtApellido.Name = "txtApellido";
@@ -236,6 +239,7 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.Enabled = false;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(364, 252);
             this.txtNombre.Name = "txtNombre";
@@ -264,7 +268,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtIDAntecedente);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox3);
@@ -303,7 +307,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtIDAntecedente;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

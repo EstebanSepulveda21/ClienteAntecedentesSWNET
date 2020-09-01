@@ -73,5 +73,18 @@ namespace PlayerUI.GUI
                 MessageBox.Show("Error! " + ex);
             }
         }
+
+        private void textBox1_Validated(object sender, EventArgs e)
+        {
+            if(textBox1.Text.Trim() == "")
+            {
+                errorProv.SetError(textBox1, "Por favor ingrese el DI ");
+                textBox1.Focus();
+            }
+            else
+            {
+                errorProv.Clear();
+            }
+        }
     }
 }
