@@ -70,3 +70,5 @@ D:\x\ClienteAntecedentesSWNET\PlayerUI\obj\Debug\ClienteAntecedentesSWNet.csproj
 D:\x\ClienteAntecedentesSWNET\PlayerUI\obj\Debug\ClienteAntecedentesSWNet.csproj.CoreCompileInputs.cache
 D:\x\ClienteAntecedentesSWNET\PlayerUI\obj\Debug\PlayerUI.exe
 D:\x\ClienteAntecedentesSWNET\PlayerUI\obj\Debug\PlayerUI.pdb
+D:\x\ClienteAntecedentesSWNET\PlayerUI\bin\Debug\Newtonsoft.Json.dll
+D:\x\ClienteAntecedentesSWNET\PlayerUI\obj\Debug\ClienteAntecedentesSWNet.csproj.CopyComplete

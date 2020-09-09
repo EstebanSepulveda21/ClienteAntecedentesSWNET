@@ -243,9 +243,9 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(252, 321);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 17);
+            this.label5.Size = new System.Drawing.Size(108, 17);
             this.label5.TabIndex = 83;
-            this.label5.Text = "Fecha de nacimiento";
+            this.label5.Text = "Fecha del delito";
             // 
             // label4
             // 
