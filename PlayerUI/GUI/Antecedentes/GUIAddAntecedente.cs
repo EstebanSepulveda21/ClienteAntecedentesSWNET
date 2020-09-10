@@ -43,7 +43,7 @@ namespace PlayerUI.GUI.Antecedentes
                 ServicioAntecedentesPenalesSWJavita.ciudadano ciudadano = controller.darCiudadanoPorCedula(cedula);
                 if(ciudadano != null)
                 {
-                    MessageBox.Show("El ciudadano con el DI: " + ciudadano.cedula + " con el nombre: " + ciudadano.nombre.Trim() + "" + ciudadano.apellido.Trim() + "Ha sido seleccionado");
+                    MessageBox.Show("El ciudadano con el DI: " + ciudadano.cedula + " con el nombre: " + ciudadano.nombre.Trim() + " " + ciudadano.apellido.Trim() + " Ha sido seleccionado");
                     txtCiudad.Enabled = true;
                     txtCod.Enabled = true;
                     txtEstado.Enabled = true;
