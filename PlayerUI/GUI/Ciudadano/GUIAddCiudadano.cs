@@ -30,16 +30,16 @@ namespace PlayerUI.GUI
         {
             this.Hide();
         }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        #region botones
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,17 +47,55 @@ namespace PlayerUI.GUI
             //Btn Añadir
             try
             {
-                String cedula = txtDi.Text;
-                int tipoDoc = comboBox1.SelectedIndex + 1;
-                String nombre = txtNombre.Text;
-                String apellido = txtApellido.Text;
-                DateTime fecha = dateTimePicker1.Value;
-                bool genero = radioButton1.Checked;
-
-                if (controller.agregarCiudadano(cedula, tipoDoc, nombre, apellido, fecha, genero))
+                if (txtApellido.Text.Trim() == "" || txtDi.Text.Trim() == "" || txtNombre.Text.Trim() == "")
                 {
-                    MessageBox.Show("El ciudadano fue agregado exitosamente!");
-                    limpiar();
+                   if(txtApellido.Text.Trim() == "" || txtDi.Text.Trim() == "")
+                    {
+                        MessageBox.Show("\t El apellido y el documento de identidad del ciudadano \n \t se encuentran vacíos \n \t por favor verifique su información e ingrese los datos");
+                    }
+                    else if (txtApellido.Text.Trim() == "" || txtNombre.Text.Trim() == "")
+                    {
+                        MessageBox.Show("\t El apellido y el nombre del ciudadano \n \t se encuentran vacíos \n \t por favor verifique su información e ingrese los datos");
+                    }
+                    else if (txtDi.Text.Trim() == "" || txtNombre.Text.Trim() == "")
+                    {
+                        MessageBox.Show("\t El documento de identidad y el nombre del ciudadano \n \t se encuentran vacíos \n \t por favor verifique su información e ingrese los datos");
+                    }
+                   else if(txtApellido.Text.Trim() == "")
+                   {
+                        MessageBox.Show("El apellido se encuentra vacío, por favor ingrese la debida información");
+                   }
+                   else if(txtDi.Text.Trim() == "")
+                   {
+                        MessageBox.Show("El documento de identidad se encuentra vacío, por favor ingrese la debida información");
+                   }
+                   else if(txtNombre.Text.Trim() == "")
+                   {
+                        MessageBox.Show("El nombre se encuentra vacío, por favor ingrese la debida información");
+                   }
+                   else
+                   {
+                        MessageBox.Show("Existen valores vacíos, por favor verifique la información suministrada");
+                   }
+                }
+                else
+                {
+                    String cedula = txtDi.Text;
+                    int tipoDoc = comboBox1.SelectedIndex + 1;
+                    String nombre = txtNombre.Text;
+                    String apellido = txtApellido.Text;
+                    DateTime fecha = dateTimePicker1.Value;
+                    bool genero = radioButton1.Checked;
+
+                    if (controller.agregarCiudadano(cedula, tipoDoc, nombre, apellido, fecha, genero))
+                    {
+                        MessageBox.Show("El ciudadano fue agregado exitosamente!");
+                        limpiar();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se agregó el ciudadano, por favor verifique la información \n o contactese con soporte técnico");
+                    }
                 }
             }
             catch(Exception ex)
@@ -65,6 +103,8 @@ namespace PlayerUI.GUI
                 MessageBox.Show("No se pudo realizar esta acción" + ex);
             }
         }
+
+        #endregion
 
         #region validaciones
         private void txtDi_Validated(object sender, EventArgs e)
@@ -118,5 +158,6 @@ namespace PlayerUI.GUI
             txtApellido.Text = "";
         }
         #endregion
+        
     }
 }

@@ -35,32 +35,58 @@ namespace PlayerUI.GUI.Antecedentes
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
+        private void GUIUpdateAntecedentes_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        #region botones
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             //btn buscar
             try
             {
-                String ciudadanoDi = txtNi.Text.Trim();
-                int codigoDelito = Int32.Parse(txtDelito.Text);
-                List<antecedente> antecedentes = controller.darAntecedentesPorCiudadanoYDelito(ciudadanoDi, codigoDelito);
-                if (antecedentes.Count > 0)
+                if (txtNi.Text.Trim() == "" || txtDelito.Text.Trim() == "")
                 {
-                    String codigoId = "" + antecedentes.ElementAt(0).id;
-                    txtDi.Text = codigoId;
-                    txtCiudad.Text = "" + antecedentes.ElementAt(0).ciudad;
-                    txtSentencia.Text = "" + antecedentes.ElementAt(0).sentencia;
-                    txtEstado.Text = "" + antecedentes.ElementAt(0).estado;
-                    dateTimePicker1.Value = antecedentes.ElementAt(0).fechaDelito;
-                    
-                    txtDi.Enabled = true;
-                    txtCiudad.Enabled = true;
-                    txtEstado.Enabled = true;
-                    txtSentencia.Enabled = true;
-                    dateTimePicker1.Enabled = true;
+                    if(txtNi.Text.Trim() == "")
+                    {
+                        MessageBox.Show("El numero de identificación se encuentra vacío, por favor ingresa valores e intentalo de nuevo");
+                    }
+                    else if(txtDelito.Text.Trim() == "")
+                    {
+                        MessageBox.Show("El codigo del delito se encuentra vacío, por favor ingresa valores e intentalo de nuevo");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Existen valores vacíos, por favor confirme su información e intentelo de nuevo");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("No hay resultados");
+                    String ciudadanoDi = txtNi.Text.Trim();
+                    int codigoDelito = Int32.Parse(txtDelito.Text);
+                    List<antecedente> antecedentes = controller.darAntecedentesPorCiudadanoYDelito(ciudadanoDi, codigoDelito);
+                    if (antecedentes.Count > 0)
+                    {
+                        String codigoId = "" + antecedentes.ElementAt(0).id;
+                        txtDi.Text = codigoId;
+                        txtCiudad.Text = "" + antecedentes.ElementAt(0).ciudad;
+                        txtSentencia.Text = "" + antecedentes.ElementAt(0).sentencia;
+                        txtEstado.Text = "" + antecedentes.ElementAt(0).estado;
+                        dateTimePicker1.Value = antecedentes.ElementAt(0).fechaDelito;
+
+                        txtDi.Enabled = true;
+                        txtCiudad.Enabled = true;
+                        txtEstado.Enabled = true;
+                        txtSentencia.Enabled = true;
+                        dateTimePicker1.Enabled = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("No hay resultados");
+                    }
                 }
             }
             catch (Exception ex)
@@ -71,6 +97,7 @@ namespace PlayerUI.GUI.Antecedentes
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //btnEliminar
             try
             {
                 int id = Int32.Parse(txtDi.Text);
@@ -84,7 +111,7 @@ namespace PlayerUI.GUI.Antecedentes
                 if(controller.actualizarAntecedente(id, ciudadanoDI, delitoCod, ciudad, date, sentencia, estado))
                 { 
                    MessageBox.Show("El antecedente ha sido actualizado correctamente!");
-                    limpiar();
+                   limpiar();
                 }
                 else 
                 {
@@ -96,17 +123,6 @@ namespace PlayerUI.GUI.Antecedentes
             {
                 MessageBox.Show("Error! " + ex);
             }
-        }
-
-        private void limpiar()
-        {
-            txtCiudad.Text = "";
-            txtSentencia.Text = "";
-            txtEstado.Text = "";
-            txtSentencia.Text = "";
-            txtDelito.Text = "";
-            txtDi.Text = "";
-            txtNi.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -121,6 +137,20 @@ namespace PlayerUI.GUI.Antecedentes
             gui.ShowDialog();
         }
 
+        #endregion
+
+        #region validaciones
+        private void limpiar()
+        {
+            txtCiudad.Text = "";
+            txtSentencia.Text = "";
+            txtEstado.Text = "";
+            txtSentencia.Text = "";
+            txtDelito.Text = "";
+            txtDi.Text = "";
+            txtNi.Text = "";
+        }
+
         public void CambiarTxtCiudadano(string ciudadanoDI)
         {
             txtNi.Text = ciudadanoDI;
@@ -130,11 +160,7 @@ namespace PlayerUI.GUI.Antecedentes
         {
             txtDelito.Text = "" + codigoDelito;
         }
+        #endregion
 
-        private void GUIUpdateAntecedentes_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
     }
 }

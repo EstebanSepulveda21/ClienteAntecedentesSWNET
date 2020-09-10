@@ -295,7 +295,7 @@ namespace PlayerUI.Controller
         public List<antecedente> darAntecedentes()
         {
             antecedente[] antecedentesList = null;
-            String urlRelativa = "darCiudadanos";
+            String urlRelativa = "darAntecedentes";
             var url = $"" + urlGeneral + urlRelativa;
             var request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = "GET";

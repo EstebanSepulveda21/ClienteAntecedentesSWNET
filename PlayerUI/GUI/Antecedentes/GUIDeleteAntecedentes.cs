@@ -40,19 +40,37 @@ namespace PlayerUI.GUI.Antecedentes
             //btn buscar
             try
             {
-                String ciudadanoDi = textBox1.Text;
-                int codigoDelito = Int32.Parse(textBox2.Text);
-                List<antecedente> antecedentes = controller.darAntecedentesPorCiudadanoYDelito(ciudadanoDi, codigoDelito);
-                if (antecedentes.Count>0)
+                if (textBox1.Text.Trim() == "" || textBox2.Text.Trim() == "")
                 {
-                    String codigoId = "" + antecedentes.ElementAt(0).id;
-                    txtIDAntecedente.Text=codigoId;
-                    txtNombre.Text = "" + antecedentes.ElementAt(0).sentencia;
-                    txtApellido.Text = "" + antecedentes.ElementAt(0).estado;
+                    if(textBox1.Text.Trim() == "")
+                    {
+                        MessageBox.Show("El Numero de identificación se encuentra vacío, por favor ingrese su DI");
+                    }
+                    if(textBox2.Text.Trim() == "")
+                    {
+                        MessageBox.Show("El codigo del delito se encuentra vacío, por favor ingrese el codigo");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tienes valores vacíos, por favor ingresa los valores e intenta de nuevo");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("No hay resultados");
+                    String ciudadanoDi = textBox1.Text;
+                    int codigoDelito = Int32.Parse(textBox2.Text);
+                    List<antecedente> antecedentes = controller.darAntecedentesPorCiudadanoYDelito(ciudadanoDi, codigoDelito);
+                    if (antecedentes.Count > 0)
+                    {
+                        String codigoId = "" + antecedentes.ElementAt(0).id;
+                        txtIDAntecedente.Text = codigoId;
+                        txtNombre.Text = "" + antecedentes.ElementAt(0).sentencia;
+                        txtApellido.Text = "" + antecedentes.ElementAt(0).estado;
+                    }
+                    else
+                    {
+                        MessageBox.Show("El codigo del delito: " + codigoDelito + " no coincide con el DI: " + ciudadanoDi);
+                    }
                 }
             }
             catch (Exception ex)
@@ -87,28 +105,12 @@ namespace PlayerUI.GUI.Antecedentes
 
         private void textBox2_Validated(object sender, EventArgs e)
         {
-            if(textBox1.Text == "")
-            {
-                errorProvider1.SetError(textBox1, "Digite el codigo");
-                textBox1.Focus();
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
+            
         }
 
         private void textBox1_Validated(object sender, EventArgs e)
         {
-            if(textBox2.Text == "")
-            {
-                errorProvider1.SetError(textBox2, "Digite el ID");
-                textBox2.Focus();
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
+           
         }
 
         private void button1_Click(object sender, EventArgs e)

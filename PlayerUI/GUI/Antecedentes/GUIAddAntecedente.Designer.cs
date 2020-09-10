@@ -40,12 +40,10 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnLista = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtSentencia = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtEstado = new System.Windows.Forms.TextBox();
@@ -160,7 +158,7 @@
             this.btnLista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
             this.btnLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLista.ForeColor = System.Drawing.Color.White;
-            this.btnLista.Location = new System.Drawing.Point(541, 93);
+            this.btnLista.Location = new System.Drawing.Point(541, 95);
             this.btnLista.Name = "btnLista";
             this.btnLista.Size = new System.Drawing.Size(37, 23);
             this.btnLista.TabIndex = 47;
@@ -170,22 +168,10 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(351, 115);
+            this.textBox1.Location = new System.Drawing.Point(351, 96);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(188, 20);
             this.textBox1.TabIndex = 46;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Cedula_De_Ciudadania",
-            "Tarjeta_De_Identidad",
-            "Cedula_De_Extranjeria"});
-            this.comboBox1.Location = new System.Drawing.Point(351, 72);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(188, 21);
-            this.comboBox1.TabIndex = 45;
             // 
             // label5
             // 
@@ -225,22 +211,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(150, 119);
+            this.label2.Location = new System.Drawing.Point(150, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(164, 17);
             this.label2.TabIndex = 40;
             this.label2.Text = "Número de identificación";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(150, 75);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 17);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Tipo de documento";
             // 
             // txtSentencia
             // 
@@ -323,12 +298,10 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnLista);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.BarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GUIAddAntecedente";
@@ -359,12 +332,10 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnLista;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox txtSentencia;
         private System.Windows.Forms.Label label7;
         public System.Windows.Forms.TextBox txtEstado;

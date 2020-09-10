@@ -32,29 +32,42 @@ namespace PlayerUI.GUI.Ciudadano
             this.Close();
         }
 
+        private void GUISearchCiudadano_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        #region botones
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             //btn buscar
             try
             {
-                String cedula = textBox1.Text;
-                ServicioAntecedentesPenalesSWJavita.ciudadano ciudadano = controller.darCiudadanoPorCedula(cedula);
-                if (ciudadano != null)
+                if (textBox1.Text.Trim() == "")
                 {
-                    txtName.Text = ciudadano.nombre;
-                    txtAp.Text = ciudadano.apellido;
-                    txtNi.Text = ciudadano.cedula;
-                    comboBox2.SelectedIndex = ciudadano.tipoDocumento;
-                    if (ciudadano.genero)
-                        radioButton1.Checked = true;
-                    else
-                        radioButton2.Checked = false;
-                    comboBox1.SelectedIndex = ciudadano.tipoDocumento - 1;
-                    dateTimePicker1.Value = ciudadano.fechaNacimiento;
+                    MessageBox.Show("Existen campos vacíos, por favor suministre la información necesaria");
                 }
-                else
-                {
-                    MessageBox.Show("El ciudadano con el DI " + cedula + " no existe");
+                else {
+                    String cedula = textBox1.Text;
+                    ServicioAntecedentesPenalesSWJavita.ciudadano ciudadano = controller.darCiudadanoPorCedula(cedula);
+                    if (ciudadano != null)
+                    {
+                        txtName.Text = ciudadano.nombre;
+                        txtAp.Text = ciudadano.apellido;
+                        txtNi.Text = ciudadano.cedula;
+                        comboBox2.SelectedIndex = ciudadano.tipoDocumento;
+                        if (ciudadano.genero)
+                            radioButton1.Checked = true;
+                        else
+                            radioButton2.Checked = false;
+                        comboBox1.SelectedIndex = ciudadano.tipoDocumento - 1;
+                        dateTimePicker1.Value = ciudadano.fechaNacimiento;
+                    }
+                    else
+                    {
+                        MessageBox.Show("El ciudadano con el DI " + cedula + " no existe");
+                    }
                 }
             }
             catch (Exception ex)
@@ -63,6 +76,13 @@ namespace PlayerUI.GUI.Ciudadano
             }
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            limpiar();
+        }
+        #endregion
+
+        #region validaciones
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             if(textBox1.Text.Trim() == "")
@@ -76,11 +96,19 @@ namespace PlayerUI.GUI.Ciudadano
             }
         }
 
-        private void GUISearchCiudadano_MouseDown(object sender, MouseEventArgs e)
+        private void limpiar()
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            textBox1.Clear();
+            txtAp.Clear();
+            txtName.Clear();
+            txtNi.Clear();
+            comboBox1.Text = "";
+            comboBox2.Text = "";
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
         }
+
+        #endregion
 
     }
 }
